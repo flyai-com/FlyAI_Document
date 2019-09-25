@@ -1,4 +1,5 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [文档中心](README.md)
+* [常见问题](chang-jian-wen-ti.md)
 

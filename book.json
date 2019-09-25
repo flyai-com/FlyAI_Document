@@ -1,0 +1,32 @@
+{
+    "title": "FlyAI_文档中心",
+    "description": "FlyAI_文档中心",
+    "author": "FlyAI",
+    "output.name": "site",
+    "language": "zh-hans",
+    "root": ".",
+    "plugins": [
+        "-lunr",
+        "-search",
+        "-sharing",
+        "-highlight",
+        "search-plus@^0.0.11"
+    ],
+    "pluginsConfig": {
+        "include-codeblock": {
+            "template": "ace",
+            "unindent": true,
+            "edit": true
+        },
+        "anchor-navigation-ex": {
+            "isRewritePageTitle": false,
+            "tocLevel1Icon": "fa fa-hand-o-right",
+            "tocLevel2Icon": "fa fa-hand-o-right",
+            "tocLevel3Icon": "fa fa-hand-o-right"
+        }
+    },
+    "styles": {
+        "website": "styles/website.css"
+    }
+}
+

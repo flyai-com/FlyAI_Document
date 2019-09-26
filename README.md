@@ -30,13 +30,13 @@ FlyAI为开发者提供免费的云端GPU（Tesla P40）计算资源用于参赛
 
 ![&#x63D0;&#x4EA4;&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#x4F53;&#x9A8C;&#x6210;&#x7EE9;&#x7ED3;&#x679C;](.gitbook/assets/ti-jiao-xun-lian.png)
 
-**默认训练参数，直接点击确定即可提交训练。**
+**默认训练参数。**
 
 ![&#x9ED8;&#x8BA4;&#x8BAD;&#x7EC3;&#x53C2;&#x6570;&#xFF0C;&#x76F4;&#x63A5;&#x70B9;&#x51FB;&#x786E;&#x5B9A;&#x5373;&#x53EF;&#x63D0;&#x4EA4;&#x8BAD;&#x7EC3;](.gitbook/assets/que-ren-xun-lian.png)
 
-#### 可以在线查看实时的训练日志。
+**可以在线查看实时的训练日志。**
 
 ![](.gitbook/assets/cha-kan-xun-lian-ri-zhi.png)
 
-**现在我们的参赛介绍完了！开始自己尝试提交吧～**
+**现在我们的参赛和在线提交流程介绍完了！接下来开始自己尝试提交吧～**
 

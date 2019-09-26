@@ -22,16 +22,58 @@
 #### 使用Windows 终端
 
 * 下载并解压代码包
+* 打开运行，输入 cmd ,打开终端
 
-{% hint style="info" %}
+```text
 Win + R 输入 cmd 打开终端
-{% endhint %}
+```
 
-{% hint style="info" %}
-使用终端命令进入到项目的根目录下
+* 使用终端进入到项目的根目录下,如：
 
-cd  path\to\project
-{% endhint %}
+```text
+cd 代码包根目录
+# 快捷方式：在终端输入"cd"后空格，直接将代码包文件拖拽到终端窗口中
+```
+
+* 执行（test）本地调试命令，自动配置本地环境依赖（首次登录需使用微信扫码登录FlyAI账号）
+
+```text
+flyai.exe test
+```
+
+* 提交本地代码文件到云端GPU训练
+
+```text
+flyai.exe train
+```
+
+### Mac/Linux系统用户本地调试说明
+
+* 下载并解压代码包
+* 使用终端进入到项目的根目录下,如：
+
+```text
+cd 代码包根目录
+# 快捷方式：在终端输入"cd"后空格，直接将代码包文件拖拽到终端窗口中
+```
+
+* 授权flyai
+
+```text
+chmod +x ./flyai
+```
+
+* 执行（test）本地调试命令，自动配置本地环境依赖（首次登录需使用微信扫码登录FlyAI账号）
+
+```text
+./flyai test
+```
+
+* 提交本地代码文件到云端GPU训练
+
+```text
+./flyai train
+```
 
 
 

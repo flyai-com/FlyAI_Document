@@ -20,8 +20,8 @@
             "edit": true
         },
         "favicon": {
-            "shortcut": "_book/images/favicon.ico",
-            "bookmark": "_book/images/favicon.ico"
+            "shortcut": "styles/favicon.ico",
+            "bookmark": "styles/favicon.ico"
         },
         "anchor-navigation-ex": {
             "isRewritePageTitle": false,

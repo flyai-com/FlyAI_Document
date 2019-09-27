@@ -15,3 +15,19 @@ Press CTRL+C to quit ...
 
 Starting server ...
 Serving book on http://localhost:4000
+Restart after change in file book.json
+
+Stopping server
+[0;36minfo:[0m 9 plugins are installed 
+[0;36minfo:[0m 5 explicitly listed 
+[0;36minfo:[0m loading plugin "search-plus"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "favicon"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "livereload"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "fontsettings"... [0;32mOK[0m 
+[0;36minfo:[0m loading plugin "theme-default"... [0;32mOK[0m 
+[0;36minfo:[0m found 3 pages 
+[0;36minfo:[0m found 10 asset files 
+[0;36minfo:[0m [0;32m>> [0mgeneration finished with success in 0.5s ! 
+
+Starting server ...
+Serving book on http://localhost:4000

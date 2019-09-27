@@ -10,13 +10,18 @@
         "-search",
         "-sharing",
         "-highlight",
-        "search-plus@^0.0.11"
+        "search-plus@^0.0.11",
+	"favicon"
     ],
     "pluginsConfig": {
         "include-codeblock": {
             "template": "ace",
             "unindent": true,
             "edit": true
+        },
+        "favicon": {
+            "shortcut": "_book/images/favicon.ico",
+            "bookmark": "_book/images/favicon.ico"
         },
         "anchor-navigation-ex": {
             "isRewritePageTitle": false,

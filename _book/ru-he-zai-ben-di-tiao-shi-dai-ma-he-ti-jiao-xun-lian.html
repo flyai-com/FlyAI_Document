@@ -1,0 +1,295 @@
+
+<!DOCTYPE HTML>
+<html lang="zh-hans" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>如何在本地调试代码和提交训练 · FlyAI_文档中心</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        <meta name="author" content="FlyAI">
+        
+        
+    
+    <link rel="stylesheet" href="gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+        <link rel="stylesheet" href="styles/website.css">
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="chang-jian-wen-ti.html" />
+    
+    
+    <link rel="prev" href="./" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="输入并搜索" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="./">
+            
+                <a href="./">
+            
+                    
+                    新手必读
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2" data-path="ru-he-zai-ben-di-tiao-shi-dai-ma-he-ti-jiao-xun-lian.html">
+            
+                <a href="ru-he-zai-ben-di-tiao-shi-dai-ma-he-ti-jiao-xun-lian.html">
+            
+                    
+                    如何在本地调试代码和提交训练
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="chang-jian-wen-ti.html">
+            
+                <a href="chang-jian-wen-ti.html">
+            
+                    
+                    常见问题
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            本书使用 GitBook 发布
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="." >如何在本地调试代码和提交训练</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="&#x5982;&#x4F55;&#x5728;&#x672C;&#x5730;&#x8C03;&#x8BD5;&#x4EE3;&#x7801;&#x548C;&#x63D0;&#x4EA4;&#x8BAD;&#x7EC3;">&#x5982;&#x4F55;&#x5728;&#x672C;&#x5730;&#x8C03;&#x8BD5;&#x4EE3;&#x7801;&#x548C;&#x63D0;&#x4EA4;&#x8BAD;&#x7EC3;</h1>
+<h3 id="&#x5982;&#x4F55;&#x4E0B;&#x8F7D;&#x4EE3;&#x7801;&#x5305;&#x5230;&#x672C;&#x5730;&#xFF1F;">&#x5982;&#x4F55;&#x4E0B;&#x8F7D;&#x4EE3;&#x7801;&#x5305;&#x5230;&#x672C;&#x5730;&#xFF1F;</h3>
+<p><strong>&#x8BF7;&#x5728;&#x4EE3;&#x7801;&#x7F16;&#x8F91;&#x9875;&#x70B9;&#x51FB;&#x201C;&#x4E0B;&#x8F7D;&#x4EE3;&#x7801;&#x201C;&#x6309;&#x94AE;&#xFF0C;&#x5C06;&#x81EA;&#x52A8;&#x4E0B;&#x8F7D;&#x5F53;&#x524D;&#x4EE3;&#x7801;&#x538B;&#x7F29;&#x5305;</strong></p>
+<p><img src=".gitbook/assets/xia-zai-dai-ma.png" alt=""></p>
+<h3 id="win&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x672C;&#x5730;&#x8C03;&#x8BD5;&#x8BF4;&#x660E;">Win&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x672C;&#x5730;&#x8C03;&#x8BD5;&#x8BF4;&#x660E;</h3>
+<h4 id="&#x4F7F;&#x7528;windows&#x5BA2;&#x6237;&#x7AEF;">&#x4F7F;&#x7528;Windows&#x5BA2;&#x6237;&#x7AEF;</h4>
+<ul>
+<li>&#x89E3;&#x538B;&#x4E0B;&#x8F7D;&#x7684;&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#x5305;&#xFF0C;&#x5E76;&#x6253;&#x5F00;&#x201C;flyai.exe&#x201C;&#x7A0B;&#x5E8F;</li>
+<li>&#x9996;&#x6B21;&#x6253;&#x5F00;&#x9700;&#x8981;&#x4F7F;&#x7528;FlyAI&#x8D26;&#x53F7;&#x767B;&#x5F55;</li>
+<li>&#x767B;&#x5F55;&#x6210;&#x529F;&#x540E;&#x53EF;&#x4EE5;&#x4E0B;&#x8F7D;&#x8C03;&#x8BD5;&#x6570;&#x636E;&#x96C6;&#xFF0C;&#x8C03;&#x8BD5;&#x6570;&#x636E;&#x4E0B;&#x8F7D;&#x5B8C;&#x6BD5;&#x5C06;&#x4F1A;&#x5728;&#x6587;&#x4EF6;&#x5939;&#x5185;&#x751F;&#x6210;&#x4EE5;&#x201C;data&#x201C;&#x547D;&#x540D;&#x7684;&#x6587;&#x4EF6;&#x5939;</li>
+<li>&#x5728;GUI&#x64CD;&#x4F5C;&#x754C;&#x9762;&#x4F7F;&#x7528;&#x672C;&#x5730;&#x8C03;&#x8BD5;&#x547D;&#x4EE4;&#x8FDB;&#x884C;&#x4EE3;&#x7801;&#x8C03;&#x8BD5;</li>
+</ul>
+<p>&#x67E5;&#x770B;Windows&#x5BA2;&#x6237;&#x7AEF;&#x4F7F;&#x7528;&#x6559;&#x7A0B;&#x89C6;&#x9891;&#xFF1A;</p>
+<p><a href="https://dataset.flyai.com/flyai_course-localdebugging.mp4" target="_blank">https://dataset.flyai.com/flyai_course-localdebugging.mp4</a></p>
+<h4 id="&#x4F7F;&#x7528;windows-&#x7EC8;&#x7AEF;">&#x4F7F;&#x7528;Windows &#x7EC8;&#x7AEF;</h4>
+<ul>
+<li>&#x4E0B;&#x8F7D;&#x5E76;&#x89E3;&#x538B;&#x4EE3;&#x7801;&#x5305;</li>
+<li>&#x6253;&#x5F00;&#x8FD0;&#x884C;&#xFF0C;&#x8F93;&#x5165; cmd ,&#x6253;&#x5F00;&#x7EC8;&#x7AEF;</li>
+</ul>
+<pre><code class="lang-text">Win + R &#x8F93;&#x5165; cmd &#x6253;&#x5F00;&#x7EC8;&#x7AEF;
+</code></pre>
+<ul>
+<li>&#x4F7F;&#x7528;&#x7EC8;&#x7AEF;&#x8FDB;&#x5165;&#x5230;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;,&#x5982;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-text">cd &#x4EE3;&#x7801;&#x5305;&#x6839;&#x76EE;&#x5F55;
+# &#x5FEB;&#x6377;&#x65B9;&#x5F0F;&#xFF1A;&#x5728;&#x7EC8;&#x7AEF;&#x8F93;&#x5165;&quot;cd&quot;&#x540E;&#x7A7A;&#x683C;&#xFF0C;&#x76F4;&#x63A5;&#x5C06;&#x4EE3;&#x7801;&#x5305;&#x6587;&#x4EF6;&#x62D6;&#x62FD;&#x5230;&#x7EC8;&#x7AEF;&#x7A97;&#x53E3;&#x4E2D;
+</code></pre>
+<ul>
+<li>&#x6267;&#x884C;&#xFF08;test&#xFF09;&#x672C;&#x5730;&#x8C03;&#x8BD5;&#x547D;&#x4EE4;&#xFF0C;&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#x672C;&#x5730;&#x73AF;&#x5883;&#x4F9D;&#x8D56;&#xFF08;&#x9996;&#x6B21;&#x767B;&#x5F55;&#x9700;&#x4F7F;&#x7528;&#x5FAE;&#x4FE1;&#x626B;&#x7801;&#x767B;&#x5F55;FlyAI&#x8D26;&#x53F7;&#xFF09;</li>
+</ul>
+<pre><code class="lang-text">flyai.exe test
+</code></pre>
+<ul>
+<li>&#x63D0;&#x4EA4;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x5230;&#x4E91;&#x7AEF;GPU&#x8BAD;&#x7EC3;</li>
+</ul>
+<pre><code class="lang-text">flyai.exe train
+</code></pre>
+<h3 id="maclinux&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x672C;&#x5730;&#x8C03;&#x8BD5;&#x8BF4;&#x660E;">Mac/Linux&#x7CFB;&#x7EDF;&#x7528;&#x6237;&#x672C;&#x5730;&#x8C03;&#x8BD5;&#x8BF4;&#x660E;</h3>
+<ul>
+<li>&#x4E0B;&#x8F7D;&#x5E76;&#x89E3;&#x538B;&#x4EE3;&#x7801;&#x5305;</li>
+<li>&#x4F7F;&#x7528;&#x7EC8;&#x7AEF;&#x8FDB;&#x5165;&#x5230;&#x9879;&#x76EE;&#x7684;&#x6839;&#x76EE;&#x5F55;&#x4E0B;,&#x5982;&#xFF1A;</li>
+</ul>
+<pre><code class="lang-text">cd &#x4EE3;&#x7801;&#x5305;&#x6839;&#x76EE;&#x5F55;
+# &#x5FEB;&#x6377;&#x65B9;&#x5F0F;&#xFF1A;&#x5728;&#x7EC8;&#x7AEF;&#x8F93;&#x5165;&quot;cd&quot;&#x540E;&#x7A7A;&#x683C;&#xFF0C;&#x76F4;&#x63A5;&#x5C06;&#x4EE3;&#x7801;&#x5305;&#x6587;&#x4EF6;&#x62D6;&#x62FD;&#x5230;&#x7EC8;&#x7AEF;&#x7A97;&#x53E3;&#x4E2D;
+</code></pre>
+<ul>
+<li>&#x6388;&#x6743;flyai</li>
+</ul>
+<pre><code class="lang-text">chmod +x ./flyai
+</code></pre>
+<ul>
+<li>&#x6267;&#x884C;&#xFF08;test&#xFF09;&#x672C;&#x5730;&#x8C03;&#x8BD5;&#x547D;&#x4EE4;&#xFF0C;&#x81EA;&#x52A8;&#x914D;&#x7F6E;&#x672C;&#x5730;&#x73AF;&#x5883;&#x4F9D;&#x8D56;&#xFF08;&#x9996;&#x6B21;&#x767B;&#x5F55;&#x9700;&#x4F7F;&#x7528;&#x5FAE;&#x4FE1;&#x626B;&#x7801;&#x767B;&#x5F55;FlyAI&#x8D26;&#x53F7;&#xFF09;</li>
+</ul>
+<pre><code class="lang-text">./flyai test
+</code></pre>
+<ul>
+<li>&#x63D0;&#x4EA4;&#x672C;&#x5730;&#x4EE3;&#x7801;&#x6587;&#x4EF6;&#x5230;&#x4E91;&#x7AEF;GPU&#x8BAD;&#x7EC3;</li>
+</ul>
+<pre><code class="lang-text">./flyai train
+</code></pre>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="./" class="navigation navigation-prev " aria-label="Previous page: 新手必读">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="chang-jian-wen-ti.html" class="navigation navigation-next " aria-label="Next page: 常见问题">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"如何在本地调试代码和提交训练","level":"1.2","depth":1,"next":{"title":"常见问题","level":"1.3","depth":1,"path":"chang-jian-wen-ti.md","ref":"chang-jian-wen-ti.md","articles":[]},"previous":{"title":"新手必读","level":"1.1","depth":1,"path":"README.md","ref":"README.md","articles":[]},"dir":"ltr"},"config":{"plugins":["-lunr","-search","-sharing","-highlight","search-plus@^0.0.11","livereload"],"root":".","styles":{"website":"styles/website.css"},"pluginsConfig":{"include-codeblock":{"template":"ace","unindent":true,"edit":true},"anchor-navigation-ex":{"isRewritePageTitle":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"search-plus":{},"livereload":{},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"FlyAI","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"FlyAI_文档中心","language":"zh-hans","output.name":"site","gitbook":"*","description":"FlyAI_文档中心"},"file":{"path":"ru-he-zai-ben-di-tiao-shi-dai-ma-he-ti-jiao-xun-lian.md","mtime":"2019-09-26T16:36:15.703Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-09-27T03:36:08.428Z"},"basePath":".","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="gitbook/gitbook.js"></script>
+    <script src="gitbook/theme.js"></script>
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-search-plus/search.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-livereload/plugin.js"></script>
+        
+    
+        
+        <script src="gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -75,11 +75,11 @@ chmod +x ./flyai
 
 #### 1）在"使用jupyter调试.ipynb"文件中运行`run main.py`进行本地调试
 
-![&#x5F53;&#x524D;&#x6837;&#x4F8B;&#x4EE3;&#x7801;&#x6B63;&#x5728;&#x672C;&#x5730;&#x73AF;&#x5883;&#x4E0B;&#x8FDB;&#x884C;&#x8C03;&#x8BD5;&#x8BAD;&#x7EC3;..](.gitbook/assets/wx20191112-170405.png)
+![](.gitbook/assets/wx20191112-202834.png)
 
 #### **2）将代码提交到云端使用GPU免费训练得出结果**
 
-![](.gitbook/assets/wx20191112-170909.png)
+![](.gitbook/assets/wx20191112-202905.png)
 
 提交成功后将会展示训练日志的链接地址，复制链接地址在浏览器中打开可实时查看训练过程
 

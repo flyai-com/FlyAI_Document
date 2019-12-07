@@ -107,42 +107,27 @@ model.fc = nn.Linear(2048,200) # 将其中的层直接替换为我们需要的�
 tensorflow加载bert预训练模型样例：
 
 ```python
+import tensorflow as tf
+import bert.modeling as modeling
 # 必须使用该方法下载模型，然后加载
 from flyai.utils import remote_helper
-path = remote_helper.get_remote_date('https://www.flyai.com/m/multi_cased_L-12_H-768_A-12.zip')
-# 参数
-lr = 0.0006  # 学习率
-rnn_type = 'lstm'
-rnn_size = 64
-layer_num = 3
-numClasses = 2
-keep_prob = 1.0
-# 使用本地路径
-data_root = os.path.join(os.path.curdir, 'data/input/model/multi_cased_L-12_H-768_A-12')
+
+path = remote_helper.get_remote_date('https://www.flyai.com/m/uncased_L-12_H-768_A-12.zip')
+print('path:', path)
+data_root = os.path.splitext(path)[0]
+print('data_root:', data_root)
+
+# ——————————————————配置文件——————————————————
+# 解析link解压后的路径
+data_root = os.path.splitext(path)[0]
+print('data_root:', data_root)  # 【注意】使用改路径前首先确认是否和预训练model下载解压路径是否一致
+# 使用当前路径
+# 【注意【注意【注意】预训练model路径存放地址和link解析路径不一致时使用下面方法直接指定【注意】【注意】【注意】
+# data_root = os.path.join(os.path.curdir, 'data/input/XXXX/XXXXX')
 bert_config_file = os.path.join(data_root, 'bert_config.json')
 bert_config = modeling.BertConfig.from_json_file(bert_config_file)
 init_checkpoint = os.path.join(data_root, 'bert_model.ckpt')
 bert_vocab_file = os.path.join(data_root, 'vocab.txt')
-# 导入数据
-input_ids = tf.placeholder(tf.int32, shape=[None, None], name='input_ids')
-input_mask = tf.placeholder(tf.int32, shape=[None, None], name='input_masks')
-segment_ids = tf.placeholder(tf.int32, shape=[None, None], name='segment_ids')
-input_y = tf.placeholder(tf.float32, shape=[None, numClasses], name="input_y")
-# 初始化BERT
-model = modeling.BertModel(
-  config=bert_config,
-  is_training=False,
-  input_ids=input_ids,
-  input_mask=input_mask,
-  token_type_ids=segment_ids,
-  use_one_hot_embeddings=False)
-# 加载bert模型
-tvars = tf.trainable_variables()
-(assignment, initialized_variable_names) = modeling.get_assignment_map_from_checkpoint(tvars, init_checkpoint)
-tf.train.init_from_checkpoint(init_checkpoint, assignment)
-# 获取最后一层
-output_layer_seq = model.get_sequence_output()  # 这个获取每个token的output
-tf.identity(model.get_pooled_output(), name='output_layer_pooled')
 ```
 
 **Q：如何将flyai框架里的dataset转换成pytorch的dataloader? pytorch 数据增强如何应用在flyai的dataset上? 训练集和验证集的预处理方式可以不一样么?**

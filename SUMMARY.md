@@ -10,5 +10,9 @@
 
 ## FlYAI优质文章 <a id="blog"></a>
 
+* [计算机视觉](blog/ji-suan-ji-shi-jue.md)
+* [自然语言处理](blog/zi-ran-yu-yan-chu-li.md)
+* [语音识别](blog/yu-yin-shi-bie.md)
+
 ## FlYAI视频课程 <a id="video"></a>
 

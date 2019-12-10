@@ -10,7 +10,7 @@ MNIST手写数字数据集是深度学习中的经典数据集，该数据集中
 
 该数据集样例如下所示：
 
-![](.gitbook/assets/a.png)
+![](../.gitbook/assets/a.png)
 
 在[ FlyAI竞赛平台上 ](https://www.flyai.com/%20) 提供了准确率为99.26%的[超详细代码实现](https://www.flyai.com/code?data_id=MNIST)，同时我们还提供GPU资源，可以训练优化自己的MNIST模型。
 
@@ -134,7 +134,7 @@ for _ in range(dataset.get_step()):
 
 可视化结果如图：
 
-![](.gitbook/assets/b.png)
+![](../.gitbook/assets/b.png)
 
 #### 构建网络
 
@@ -168,7 +168,7 @@ sqeue.compile(loss='categorical_crossentropy', optimizer='adam', metrics=['accur
 
 运行summary\(\)方法后输出的网络结构如下图：
 
-![](.gitbook/assets/c.png)
+![](../.gitbook/assets/c.png)
 
 keras提供了keras.utils.vis\_utils模块可以对模型进行可视化操作。
 
@@ -179,7 +179,7 @@ plot_model(sqeue, show_shapes=True, to_file='model.png')
 
 模型结构图如下所示：
 
-![](.gitbook/assets/model.png)
+![](../.gitbook/assets/model.png)
 
 #### 模型训练
 
@@ -198,7 +198,7 @@ train_log(train_loss=history.history['loss'][0],
 
 训练集和验证集的准确率及损失实时变化曲线如图：
 
-![](.gitbook/assets/d.png)
+![](../.gitbook/assets/d.png)
 
 ## 最终结果
 

@@ -4,11 +4,11 @@
 
 **请在代码编辑页点击"下载代码"按钮，将当前代码下载到本地** 
 
-![](.gitbook/assets/xia-zai-dai-ma.png)
+![](../.gitbook/assets/xia-zai-dai-ma.png)
 
 注：如果想下载赛题样例代码可以点击查看版本，并重新导入样例代码后执行下载操作：
 
-![](.gitbook/assets/image-20191112155024036.png)
+![](../.gitbook/assets/image-20191112155024036.png)
 
 ### 2.启动 FlyAI 本地调试环境（Jupyter）
 
@@ -75,15 +75,15 @@ chmod +x ./flyai
 
 #### 1）在"使用jupyter调试.ipynb"文件中运行`run main.py`进行本地调试
 
-![](.gitbook/assets/wx20191112-202834.png)
+![](../.gitbook/assets/wx20191112-202834.png)
 
 #### **2）将代码提交到云端使用GPU免费训练得出结果**
 
-![](.gitbook/assets/wx20191112-202905.png)
+![](../.gitbook/assets/wx20191112-202905.png)
 
 提交成功后将会展示训练日志的链接地址，复制链接地址在浏览器中打开可实时查看训练过程
 
-![](.gitbook/assets/wx20191112-172249.png)
+![](../.gitbook/assets/wx20191112-172249.png)
 
 ### 4.开始实现我的代码
 
@@ -109,7 +109,7 @@ chmod +x ./flyai
 
 
 
-![&#x5FAE;&#x4FE1;&#x626B;&#x63CF;&#x4E0A;&#x65B9;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x52A0;&#x5165;&#x5927;&#x795E;&#x5708;&#x5B66;&#x4E60;&#x6210;&#x957F;&#xFF01;](.gitbook/assets/wx20191112-173043.png)
+![&#x5FAE;&#x4FE1;&#x626B;&#x63CF;&#x4E0A;&#x65B9;&#x4E8C;&#x7EF4;&#x7801;&#xFF0C;&#x52A0;&#x5165;&#x5927;&#x795E;&#x5708;&#x5B66;&#x4E60;&#x6210;&#x957F;&#xFF01;](../.gitbook/assets/wx20191112-173043.png)
 
 微信扫描上方二维码，加入大神圈学习成长！
 

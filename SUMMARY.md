@@ -6,7 +6,3 @@
 * [在MNIST数据集上达到99.26%的准确率](mnist.md)
 * [常见问题](question.md)
 
-## 新手入门
-
-* [Untitled](xin-shou-ru-men/untitled.md)
-

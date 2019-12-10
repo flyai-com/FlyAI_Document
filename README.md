@@ -42,3 +42,16 @@ FlyAI为开发者提供免费的云端GPU（Tesla P40）计算资源用于参赛
 
 **现在我们的参赛和在线提交流程介绍完了！接下来开始自己尝试提交吧～**
 
+\*\*\*\*
+
+```text
+<video id="video" controls="" preload="none" poster="http://media.w3.org/2010/05/sintel/poster.png">
+      <source id="mp4" src="http://media.w3.org/2010/05/sintel/trailer.mp4" type="video/mp4">
+      <source id="webm" src="http://media.w3.org/2010/05/sintel/trailer.webm" type="video/webm">
+      <source id="ogv" src="http://media.w3.org/2010/05/sintel/trailer.ogv" type="video/ogg">
+      <p>Your user agent does not support the HTML5 Video element.</p>
+    </video>
+```
+
+
+

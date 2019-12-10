@@ -1,4 +1,4 @@
-# 体验在MNIST数据集上99.26%的准确率
+# 体验MNIST数据集99.26%的准确率
 
 ## 项目简介
 
@@ -12,7 +12,7 @@ MNIST手写数字数据集是深度学习中的经典数据集，该数据集中
 
 ![](../.gitbook/assets/a.png)
 
-在[ FlyAI竞赛平台上 ](https://www.flyai.com/%20) 提供了准确率为99.26%的[超详细代码实现](https://www.flyai.com/code?data_id=MNIST)，同时我们还提供GPU资源，可以训练优化自己的MNIST模型。
+在[ FlyAI竞赛平台上 ](https://www.flyai.com/d/MNIST)提供了准确率为99.26%的[超详细代码实现](https://www.flyai.com/code?data_id=MNIST)，同时我们还提供GPU资源，可以训练优化自己的MNIST模型。
 
 ## 代码实现
 

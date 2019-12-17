@@ -19,7 +19,7 @@ TensorFlow由谷歌人工智能团队谷歌大脑（Google Brain）开发和维�
 
 单进程版本的TensorFlow没有分发中心和执行器，而是使用特殊的会话应用（Session implementation）联系本地设备。TensorFlow的C语言API是核心组件和用户代码的分界，其它组件/API均通过C语言API与核心组件进行交互。
 
-![tf_stru](./images/tf_stru.png)
+![tf_stru](https://static.flyai.com/tf_stru.png)
 
 ## 低阶API
 

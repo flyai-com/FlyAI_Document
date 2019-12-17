@@ -11,7 +11,7 @@
 ## FlYAI优质文章 <a id="blog"></a>
 
 * [计算机视觉](blog/computer-vision.md)
-  * [入门](计算机视觉/elementary .md)
+  * [入门](计算机视觉/elementary.md)
   * [中级](计算机视觉/middle.md)
   * [高级](计算机视觉/senior.md)
 * [自然语言处理](blog/nlp.md)

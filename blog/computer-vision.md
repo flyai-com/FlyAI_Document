@@ -9,6 +9,8 @@
 ## 中级
 ### MNIST数据集分类
 ### ResNet-18实现Cifar-10图像分类
+### OCR文字识别
+### 二代身份证号识别
 ### TensorFlow实现一个简单的分类网络
 ### pytorch实现GAN
 ### tensorflow实现LeNet-5模型

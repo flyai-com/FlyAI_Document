@@ -1,14 +1,5 @@
----
-title: Keras快速入门教程
-tags: keras,入门教程
-slug: storywriter/upgrade_log
-grammar_mindmap: true
-renderNumberedHeading: true
-grammar_code: true
-grammar_decorate: true
-grammar_mathjax: true
+# Keras快速入门教程
 
----
 
 # 引言
 
@@ -48,15 +39,15 @@ model.add(Dense(units=10, activation='softmax'))
 
 ```python?linenums
 model.compile(loss='categorical_crossentropy',
-              optimizer='sgd',
-              metrics=['accuracy'])
+            optimizer='sgd',
+            metrics=['accuracy'])
 ```
 
 或者：
 
 ```python?linenums
 model.compile(loss=keras.losses.categorical_crossentropy,
-              optimizer=keras.optimizers.SGD(lr=0.01, momentum=0.9, nesterov=True))
+            optimizer=keras.optimizers.SGD(lr=0.01, momentum=0.9, nesterov=True))
 
 ```
 
@@ -121,12 +112,12 @@ model.add(Dense(10, activation='softmax'))
 
 # Compile model
 model.compile(loss='categorical_crossentropy',
-              optimizer='adam',
-              metrics=['accuracy'])
+            optimizer='adam',
+            metrics=['accuracy'])
 
 # Fit model on training data
 model.fit(X_train, Y_train,
-          batch_size=32, epochs=10, verbose=1)
+        batch_size=32, epochs=10, verbose=1)
 
 # Evaluate model on test data
 score = model.evalute(X_test, Y_test, verbose=0)

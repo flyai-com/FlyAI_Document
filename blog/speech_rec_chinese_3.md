@@ -10,9 +10,9 @@
 项目地址：https://github.com/audier/DeepSpeechRecognition
 为了方便同学们自己做实验，写了实践版的tutorial：
 
-> 声学模型：https://blog.csdn.net/chinatelecom08/article/details/85013535
-> 基于transformer的语言模型：https://blog.csdn.net/chinatelecom08/article/details/85051817
-> 基于CBHG的语言模型：https://blog.csdn.net/chinatelecom08/article/details/85048019
+> * 声学模型：https://blog.csdn.net/chinatelecom08/article/details/85013535
+> * 基于transformer的语言模型：https://blog.csdn.net/chinatelecom08/article/details/85051817
+> * 基于CBHG的语言模型：https://blog.csdn.net/chinatelecom08/article/details/85048019
 
 # 声学模型
 

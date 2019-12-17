@@ -19,10 +19,10 @@ PyYAML==3.12
 ```
 
 如果您没有gpu设备，演示步骤如下：
-> *（1）将文件./ctpn/text.yml中的“USE_GPU_NMS”设置为“False” ;
-> *（2）在文件中设置“__C.USE_GPU_NMS” ./lib/fast_rcnn/config.py为“False”;
-> *（3）在文件./lib/fast_rcnn/nms_wrapper.py中注释掉“from lib.utils.gpu_nms import gpu_nms”;
-> *（4）重建 setup.py：
+>*（1）将文件./ctpn/text.yml中的“USE_GPU_NMS”设置为“False” ;
+>*（2）在文件中设置“__C.USE_GPU_NMS” ./lib/fast_rcnn/config.py为“False”;
+>*（3）在文件./lib/fast_rcnn/nms_wrapper.py中注释掉“from lib.utils.gpu_nms import gpu_nms”;
+>*（4）重建 setup.py：
 
 ```python?linenums
 from Cython.Build import cythonize
@@ -45,7 +45,7 @@ setup(ext_modules=cythonize(["bbox.pyx","cython_nms.pyx"],
 
 （c）将.so文件从“build”目录复制到xxx/text-detection-ctpn-master/lib/utils。
 
-（5）cd xxx/text-detection-ctpn-master并执行：python ./ctpn/demo.py
+（d）cd xxx/text-detection-ctpn-master并执行：python ./ctpn/demo.py
 
 顺便说一下，我使用
 Anaconda2-4.2.0-Linux-x86_64.sh和tensorflow-1.3.0-cp27-cp27mu-manylinux1_x86_64.whl（cpu）在ubuntu 16.04下运行。
@@ -62,9 +62,9 @@ chmod + x make.sh
 Github地址：https://github.com/eragonruan/text-detection-ctpn
 我们使用 Classify(vgg16) 来检测文本方向，使用CTPN(CNN+RNN) 来检测文本区域，使用 CRNN(CNN+GRU/LSTM+CTC) 来进行 EndToEnd的文本识别。
 
-> 1.文本方向检测网络-Classify(vgg16)
-> 2.文本区域检测网络-CTPN(CNN+RNN)
-> 3.EndToEnd文本识别网络-CRNN(CNN+GRU/LSTM+CTC)
+>* 1.文本方向检测网络-Classify(vgg16)
+>* 2.文本区域检测网络-CTPN(CNN+RNN)
+>* 3.EndToEnd文本识别网络-CRNN(CNN+GRU/LSTM+CTC)
 
 基于图像分类，在VGG16模型的基础上，训练0、90、180、270度检测的分类模型（考虑到文本在纸张上出现的情况）。代码参考angle/predict.py文件，训练图片8000张，准确率88.23%
 关于 OCR 端到端识别:CRNN网络请查看 https://blog.csdn.net/wsp_1138886114/article/details/82555728

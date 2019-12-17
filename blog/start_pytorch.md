@@ -299,7 +299,7 @@ False
 
 &emsp;&emsp;神经网络可以用torch.nn构建。现在我们可以来看一看autograd这个部分了，torch.nn依赖于它来定义模型并做微分，nn.Module包含神经层，forward(input)可以用来返回output。例如，看接下来这个可以给数字图像分类的网络。
 
-![lenet-5](./images/lenet-5.png)
+![lenet-5](https://static.flyai.com/lenet-5.png)
 
 &emsp;&emsp;这个是一个简单前馈网络，它将输入经过一层层的传递，最后给出了结果。一个经典的神经网络的学习过程如下所示：
 

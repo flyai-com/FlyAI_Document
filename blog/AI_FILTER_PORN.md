@@ -15,7 +15,7 @@ drawings, hentai, neutral, porn, sexy
 0,1,2,3,4
 ```
 
-在[ FlyAI竞赛平台上 ](https://www.flyai.com/ ) 提供了超详细的[参考代码](https://www.flyai.com/o/MedicalQABot)，我们可以通过参加[图像鉴黄练习赛](https://www.flyai.com/o/MedicalQABot)进行进一步学习和优化。主要部分代码实现如下：
+在[ FlyAI竞赛平台上 ](https://www.flyai.com) 提供了超详细的[参考代码](https://www.flyai.com)，我们可以通过参加[图像鉴黄练习赛](https://www.flyai.com)进行进一步学习和优化。主要部分代码实现如下：
 
 ## 3、代码实现
 
@@ -360,9 +360,9 @@ def evaluate(val_loader, model, criterion, epoch):
 
 ### 3.2、最终结果
 
-最终Model的结果通过平均精度mAP进行评估。下面是该项目的可运行[完整代码链接](https://www.flyai.com/o/MedicalQABot)，具体细节可查看完整代码。
+最终Model的结果通过平均精度mAP进行评估。下面是该项目的可运行[完整代码链接](https://www.flyai.com)，具体细节可查看完整代码。
 
 #### 参考链接：
 
--  [图像鉴黄练习赛](https://www.flyai.com/d/MedicalQABot)
--  [图像鉴黄练习赛代码](https://www.flyai.com/o/MedicalQABot)
+-  [图像鉴黄练习赛](https://www.flyai.com)
+-  [图像鉴黄练习赛代码](https://www.flyai.com)

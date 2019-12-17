@@ -1,9 +1,9 @@
 # 计算机视觉
     本教程主要介绍一些有关计算机视觉方向的内容，帮助大家快速入门和进阶。教程内容收集整理自网络，如有侵权，请联系删除！
 # 目录
-## 入门
-### [Keras快速入门教程](blog/start_keras.md)
-### [第一个TensorFlow程序](blog/start_tensorflow.md)
+## 入门 <a id="blog"></a>
+* [Keras快速入门教程](blog/start_keras.md)
+* [第一个TensorFlow程序](blog/start_tensorflow.md)
 ### [一小时学会PyTorch](blog/start_pytorch.md)
 ### [TensorFlow组件介绍](blog/component_tensorflow.md)
 ## 中级
@@ -19,3 +19,14 @@
 ### [验证码识别](blog/ID_CARD_RECOGNITION.md)
 ### [自定义多线程优化Pytorch框架的数据加载过程](blog/improve_dataload_mutil_thread.md)
 ### [优化Pytorch的数据加载](blog/improve_dataload_pytorch.md)
+
+
+# Table of contents
+
+* [新手必读](README.md)
+* [常见问题](question.md)
+
+## FlyAI使用说明 <a id="description"></a>
+
+* [Jupyter本地调试和云端GPU运行](description/jupyter.md)
+* [体验MNIST数据集99.26%的准确率](description/mnist.md)

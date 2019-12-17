@@ -5,7 +5,8 @@
 
 在利用深度学习解决图像问题时，影响训练效率最大的有时候是GPU，有时候也可能是CPU和你的磁盘。
 很多设计不当的任务，在训练神经网络的时候，大部分时间都是在从磁盘中读取数据，而不是做 Backpropagation 。这种症状的体现是使用 Nividia-smi 查看 GPU 使用率时，Memory-Usage 占用率很高，但是 GPU-Util 时常为 0% ，如下图所示：
-![nvidia-smi](./images/nvidia-smi.jpg)
+
+![nvidia-smi](https://static.flyai.com/nvidia-smi.jpg)
 
 # 解决方案
 
@@ -66,7 +67,8 @@ while data is not None:
 ```
 
 这样子我们的 Dataloader 就像打了鸡血一样提高了效率很多，如下图：
-![nvidia-smi2](./images/nvidia-smi2.jpg)
+
+![nvidia-smi2]https://static.flyai.com/nvidia-smi2.jpg)
 
 # 其他方案
 

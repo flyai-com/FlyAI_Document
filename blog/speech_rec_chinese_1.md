@@ -142,7 +142,8 @@ print(label_batch)
 
 模型采用self-attention,模型结构如下：
 
-![attention](./images/attention.png)
+![attention](https://static.flyai.com/attention.png)
+
 模型代码搭建我们直接参考开源的代码：
 https://github.com/Kyubyong/transformer/blob/master/modules.py
 我们只需要注意每一快的输入输出数据形式怎样即可。

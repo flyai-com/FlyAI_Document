@@ -222,5 +222,5 @@ if __name__ == "__main__":
 ![accu](./images/accu.png)
 
 本文来源：
-> [Pytorch实战2：ResNet-18实现Cifar-10图像分类](https://blog.csdn.net/sunqiande88/article/details/80100891)
-> [项目完整代码](https://pan.baidu.com/s/1xVvSnrZPe2DKNUlcQ_nWSQ)
+> * [Pytorch实战2：ResNet-18实现Cifar-10图像分类](https://blog.csdn.net/sunqiande88/article/details/80100891)
+> * [项目完整代码](https://pan.baidu.com/s/1xVvSnrZPe2DKNUlcQ_nWSQ)

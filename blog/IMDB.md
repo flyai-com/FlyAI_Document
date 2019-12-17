@@ -121,7 +121,7 @@ plt.legend()
 plt.show()
 ```
 
-![loss](./images/loss.png)
+![loss](https://static.flyai.com/loss.png)
 
 ```python?linenums
 plt.clf()   # 清除图表
@@ -138,7 +138,7 @@ plt.legend()
 plt.show()
 ```
 
-![accuracy](./images/accuracy.png)
+![accuracy](https://static.flyai.com/accuracy.png)
 
 
 

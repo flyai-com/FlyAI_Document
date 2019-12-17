@@ -1,7 +1,7 @@
 # 计算机视觉
     本教程主要介绍一些有关计算机视觉方向的内容，帮助大家快速入门和进阶。教程内容收集整理自网络，如有侵权，请联系删除！
 # 目录
-## 入门 <a id="blog"></a>
+## 入门 <a id="../blog"></a>
 * [Keras快速入门教程](blog/start_keras.md)
 * [第一个TensorFlow程序](blog/start_tensorflow.md)
 ### [一小时学会PyTorch](blog/start_pytorch.md)

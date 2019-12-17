@@ -125,14 +125,14 @@ score = model.evalute(X_test, Y_test, verbose=0)
 
 
 相关链接：
-[1] Keras网站：https://keras.io
-[2] TensforFlow 安装：https://www.tensorflow.org/install/
-[3] MNIST: https://keras.io/datasets/ 
-[4] Example: https://github.com/keras-team/keras/tree/master/examples 
-[5] Q&A: https://keras.io/getting-started/faq/ 
-[6] Model API: https://keras.io/models/model/ 
-[7] Sequential Model：https://keras.io/getting-started/sequential-model-guide/ 
-[8] MNIST 模型视频： https://www.youtube.com/watch?v=L8unuZNpWw8 
-https://www.youtube.com/watch?v=Ky1ku1miDow&feature=youtu.be 
-https://www.youtube.com/watch?v=F1vek6ULo9w&feature=youtu.be
-[9] [深度学习框架之Keras入门教程](https://blog.csdn.net/c602273091/article/details/78917069)
+> * [1] Keras网站：https://keras.io
+> * [2] TensforFlow 安装：https://www.tensorflow.org/install/
+> * [3] MNIST: https://keras.io/datasets/ 
+> * [4] Example: https://github.com/keras-team/keras/tree/master/examples 
+> * [5] Q&A: https://keras.io/getting-started/faq/ 
+> * [6] Model API: https://keras.io/models/model/ 
+> * [7] Sequential Model：https://keras.io/getting-started/sequential-model-guide/ 
+> * [8] MNIST 模型视频： https://www.youtube.com/watch?v=L8unuZNpWw8 
+> * https://www.youtube.com/watch?v=Ky1ku1miDow&feature=youtu.be 
+> * https://www.youtube.com/watch?v=F1vek6ULo9w&feature=youtu.be
+> * [9] [深度学习框架之Keras入门教程](https://blog.csdn.net/c602273091/article/details/78917069)

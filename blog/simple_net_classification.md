@@ -8,7 +8,8 @@ TensorFlow是谷歌开源的AI开发工具，可以用于实现普通的机器�
 # 鸢尾花分类
 
 下图是3种不同的鸢尾花，从左至右分别是setosa, virginica和versicolor。3种鸢尾花的花萼和花瓣的长宽各有不同。
-![iris](./images/iris.jpg)
+
+![iris](https://static.flyai.com/iris.jpg)
 
 [iris_training.csv](https://github.com/Fundebug/tensorflow-101/blob/master/data/iris_training.csv)是训练数据，它提供了120个鸢尾花的花萼和花瓣的长宽数据，并且标记了所属的鸢尾花类别。
 
@@ -109,7 +110,7 @@ MODEL = tf.keras.Sequential([
 ```
 
 可知，这是一个4层的神经网络，包含1个输入层，2个隐藏层和1个输出层，2个隐藏层都有10个神经元，使用RELU作为激励函数，如下图所示：
-![neural_network](./images/neural_network.png)
+![neural_network](https://static.flyai.com/neural_network.png)
 
 训练代码最核心的是部分[train](https://github.com/Fundebug/tensorflow-101/blob/73ee21f838b3a30915e5f3ba22cb63a9c6e9c7ea/src/train.py#L45)函数：
 

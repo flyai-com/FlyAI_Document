@@ -7,7 +7,7 @@
 一开始数据集大概每类300条，准确率只有86%左右，文本分类要求数据量足够，才能训练处合适的模型，我选择数据集的过程中经历了很多波折，最后使用的清华的THUCNews，我觉得是我能找到的最优的数据集了，关于数据集我专门写了一个博文，[请点这里](https://blog.csdn.net/alicelmx/article/details/79083903
 )。 最后使用的数据格式如下，因为原始数据量太大了，只抽取了一部分。
 
-![DIS8YDBT](./images/DIS8YDBT.png)
+![DIS8YDBT](https://static.flyai.com/DIS8YDBT.png)
 
 # 抽取、整理数据
 
@@ -517,12 +517,14 @@ if __name__ == '__main__':
 ## 训练结果
 
 python runCNN.py train
-![result_train](./images/result_train.png)
+
+![result_train](https://static.flyai.com/result_train.png)
 
 ## 验证结果
 
 python runCNN.py test 结果还行96.43%
-![result_test](./images/result_test.png)
+
+![result_test](https://static.flyai.com/result_test.png)
 
 本文来源：
 

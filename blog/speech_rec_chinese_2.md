@@ -525,7 +525,7 @@ def data_generator(batch_size, shuffle_list, wav_lst, label_data, vocab):
 训练输入为时频图，标签为对应的拼音标签，如下所示：
 搭建语音识别模型，采用了 CNN+CTC 的结构。
 
-![cnn](./images/cnn.png)
+![cnn](https://static.flyai.com/cnn.png)
 
 ```python?linenums
 import keras

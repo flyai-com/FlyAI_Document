@@ -3,30 +3,19 @@
 # 目录
 ## 入门 
 * [Keras快速入门教程](start_keras.md)
-* [第一个TensorFlow程序](blog/start_tensorflow.md)
-### [一小时学会PyTorch](blog/start_pytorch.md)
-### [TensorFlow组件介绍](blog/component_tensorflow.md)
+* [第一个TensorFlow程序](start_tensorflow.md)
+* [一小时学会PyTorch](start_pytorch.md)
+* [TensorFlow组件介绍](component_tensorflow.md)
 ## 中级
-### [MNIST数据集分类](blog/mnist.md)
-### [ResNet-18实现Cifar-10图像分类](blogcifar_resnet18.md/)
-### [OCR文字识别](blog/ocr.md)
-### [二代身份证号识别](blog/ID_CARD_RECOGNITION.md)
-### [TensorFlow实现一个简单的分类网络](blog/simple_net_classification.md)
-### [pytorch实现GAN](blog/gan_pytorch.md)
-### [tensorflow实现LeNet-5模型](blog/lenet5_tensorflow.md)
+* [MNIST数据集分类](mnist.md)
+* [ResNet-18实现Cifar-10图像分类](cifar_resnet18.md)
+* [OCR文字识别](ocr.md)
+* [二代身份证号识别](ID_CARD_RECOGNITION.md)
+* [TensorFlow实现一个简单的分类网络](simple_net_classification.md)
+* [pytorch实现GAN](gan_pytorch.md)
+* [tensorflow实现LeNet-5模型](lenet5_tensorflow.md)
 ## 高级
-### [利用tensorflow训练简单的生成对抗网络GAN](blog/gan_tensorflow.md)
-### [验证码识别](blog/ID_CARD_RECOGNITION.md)
-### [自定义多线程优化Pytorch框架的数据加载过程](blog/improve_dataload_mutil_thread.md)
-### [优化Pytorch的数据加载](blog/improve_dataload_pytorch.md)
-
-
-# Table of contents
-
-* [新手必读](README.md)
-* [常见问题](question.md)
-
-## FlyAI使用说明 <a id="description"></a>
-
-* [Jupyter本地调试和云端GPU运行](description/jupyter.md)
-* [体验MNIST数据集99.26%的准确率](description/mnist.md)
+* [利用tensorflow训练简单的生成对抗网络GAN](gan_tensorflow.md)
+* [验证码识别](ID_CARD_RECOGNITION.md)
+* [自定义多线程优化Pytorch框架的数据加载过程](improve_dataload_mutil_thread.md)
+* [优化Pytorch的数据加载](improve_dataload_pytorch.md)

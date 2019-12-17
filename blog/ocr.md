@@ -19,10 +19,10 @@ PyYAML==3.12
 ```
 
 如果您没有gpu设备，演示步骤如下：
-（1）将文件./ctpn/text.yml中的“USE_GPU_NMS”设置为“False” ;
-（2）在文件中设置“__C.USE_GPU_NMS” ./lib/fast_rcnn/config.py为“False”;
-（3）在文件./lib/fast_rcnn/nms_wrapper.py中注释掉“from lib.utils.gpu_nms import gpu_nms”;
-（4）重建 setup.py：
+>（1）将文件./ctpn/text.yml中的“USE_GPU_NMS”设置为“False” ;
+>（2）在文件中设置“__C.USE_GPU_NMS” ./lib/fast_rcnn/config.py为“False”;
+>（3）在文件./lib/fast_rcnn/nms_wrapper.py中注释掉“from lib.utils.gpu_nms import gpu_nms”;
+>（4）重建 setup.py：
 
 ```python?linenums
 from Cython.Build import cythonize

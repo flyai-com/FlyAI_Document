@@ -147,7 +147,7 @@ pyplot.imshow(images_square_grid(mnist_images, 'L'), cmap='gray')
 ```
 
 mninst：
-![mninst](./images/mninst.PNG)
+![mninst](https://static.flyai.com/mninst.PNG)
 
 ```python?linenums
  show_n_images = 9
@@ -157,7 +157,7 @@ mninst：
 ```
 
 celeba:
-![celeba](./images/celeba.PNG)
+![celeba](https://static.flyai.com/celeba.PNG)
 现在我们开始搭建网络
 这里我建议用GPU来训练，tensorflow的版本最好是1.1.0
 
@@ -458,9 +458,9 @@ with tf.Graph().as_default():
 
 训练效果如下
 开始的时候，网络的参数很差，我们生成的手写数字的效果自然就不好
-![mninst_gen1](./images/mninst_gen1.PNG)
+![mninst_gen1](https://static.flyai.com/mninst_gen1.PNG)
 随着训练的进行，轮廓逐渐清晰，效果如下，到最后：
-![mninst_gen2](./images/mninst_gen2.PNG)
+![mninst_gen2](https://static.flyai.com/mninst_gen2.PNG)
 我们看到数字的轮廓基本是清晰可以辨认的，当然，这只是两个epoch的结果，如果有足够的时间经过更长时间的训练，效果会更好。
 我们同样展示下对celeba人脸数据集的训练结果
 
@@ -479,9 +479,9 @@ with tf.Graph().as_default():
 ```
 
 训练开始：
-![celeba_gen1](./images/celeba_gen1.PNG)
+![celeba_gen1](https://static.flyai.com/celeba_gen1.PNG)
 经过一个epoch之后：
-![celeba_gen2](./images/celeba_gen2.PNG)
+![celeba_gen2](https://static.flyai.com/celeba_gen2.PNG)
 
 人脸的轮廓基本清晰了。
 

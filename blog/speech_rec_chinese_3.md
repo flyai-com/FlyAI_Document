@@ -54,7 +54,7 @@
 
 该模型在[cnn_ctc.py](https://github.com/audier/DeepSpeechRecognition/blob/master/model_speech/cnn_ctc.py)中，实验中是所有网络结果最好的模型，目前能够取得较好的泛化能力。其网络结构如下：
 
-![cnn_ctc](./images/cnn_ctc.jpg)
+![cnn_ctc](https://static.flyai.com/cnn_ctc.jpg)
 
 ```python?linenums
 def cnn_cell(size, x, pool=True):
@@ -84,7 +84,8 @@ class Am():
 
 而前馈记忆神经网络也也解决了双向GRU的参数过多和实时性较差的缺点，它利用一个记忆模块，包含了上下几帧信息，能够得到不输于双向GRU-CTC的识别结果，阿里最新的开源系统就是基于DFSMN的声学模型，只不过在kaldi的框架上实现的。我们将考虑使用DFSMN+CTC的结构在python上实现。该网络实质上是用一个特殊的CNN就可以取得相同的效果，我们将CNN的宽设置为memory size，将高度设置为feature dim，将channel设置为hidden units，这样一个cnn的层就可以模仿fsmn的实现了。
 结构如下：
-![ccn_2](./images/ccn_2.png)
+
+![ccn_2](https://static.flyai.com/ccn_2.png)
 
 # 语言模型
 
@@ -101,7 +102,9 @@ n元语法是一个非常经典的语言模型，这里不过多介绍啦。
 模型初始输入是一个随机采样的拼音字母的character embedding，经过一个CBHG的模型，输出是五千个汉字对应的label。
 这里使用的CBHG模块是state-of-art的seq2seq模型，用在Google的机器翻译和语音合成中，该模型放在[cbhg.py](https://github.com/audier/DeepSpeechRecognition/blob/master/model_language/cbhg.py)中，结构如下：
 图片来自 [Tacotron: Towards End-to-End Speech Synthesis](https://arxiv.org/pdf/1703.10135.pdf)
-![Tacotron](./images/Tacotron.jpg)
+
+![Tacotron](https://static.flyai.com/Tacotron.jpg)
+
 该模型训练实验结果如下，实际上，后续和transformer的比较中，该模型无论是收敛速度还是识别效果上都是很难和transformer比较。
 
 ```python?linenums

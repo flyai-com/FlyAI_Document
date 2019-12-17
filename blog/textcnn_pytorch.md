@@ -5,7 +5,9 @@
 
 2014年的一篇文章，开创cnn用到文本分类的先河。[Convolutional Neural Networks for Sentence Classification](https://arxiv.org/pdf/1408.5882.pdf)
 原理说简单也简单，其实就是单层CNN加个全连接层：
-![textcnn](./images/textcnn.png)
+
+![textcnn](https://static.flyai.com/textcnn.png)
+
 不过与图像中的cnn相比，改动为将卷积核的宽固定为一个词向量的维度，而长度一般取2,3,4,5这样。上图中第一幅图的每个词对应的一行为一个词向量，可以使用word2vec或者glove预训练得到。本例中使用随机初始化的向量。
 
 # 数据预处理
@@ -72,7 +74,9 @@ plt.show()
 ```
 
 得到长度的分布图：
-![Histogram](./images/Histogram.png)
+
+![Histogram](https://static.flyai.com/Histogram.png)
+
 可以看到长度小于1000的文本占据所有训练数据的80%左右，因此训练时每个文本固定长度为1000个词。
 
 ## 由文本得到训练用的mini-batch数据
@@ -296,7 +300,9 @@ def eval(data_iter, model, args):
 这暂时就不贴了。可以参考下一部分给出的github。
 最终在测试集合上accuracy为97%（毕竟只是四分类）。
 但是遇到个问题就是随着accuracy上升，loss也在迅速增大。
-![log](./images/log.png)
+
+![log](https://static.flyai.com/log.png)
+
 在一番探究之后大致得出结论就是，这样是没问题的。比如在本例中是个四分类，加入全连接层输出的结果是[-10000,0,0,10000]，而正确分类是0。那么这就是个错误的结果。计算一下这个单个样例的loss。先算softmax，约等于[e−20000,e−10000,e−10000,1e−20000,e−10000,e−10000,1      e^{-20000},e^{-10000},e^{-10000},1e−20000,e−10000,e−10000,1]。真实的label为[1,0,0,0]，因此交叉熵为20000。所以我们发现这一个错误样例的loss就会这么大。最终的loss大一些也是正常的。
 不过为什么随着accuracy接近100%而导致loss迅速增加这个问题还需要进一步研究。大概是因为随着accuracy升高导致结果接近训练集的分布，这样与验证集或测试集的分布产生比较极端差别的个例会增加。
 

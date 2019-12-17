@@ -68,7 +68,7 @@ while data is not None:
 
 这样子我们的 Dataloader 就像打了鸡血一样提高了效率很多，如下图：
 
-![nvidia-smi2]https://static.flyai.com/nvidia-smi2.jpg)
+![nvidia-smi2](https://static.flyai.com/nvidia-smi2.jpg)
 
 # 其他方案
 

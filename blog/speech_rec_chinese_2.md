@@ -4,12 +4,12 @@
 
 # 利用thchs30为例建立一个语音识别系统
 
-论文地址：http://xueshu.baidu.com/usercenter/paper/show?paperid=be5348048dd263aced0f2bdc75a535e8&site=xueshu_se
-代码地址：https://github.com/audier/my_ch_speech_recognition/tree/master/tutorial
+> * 论文地址：http://xueshu.baidu.com/usercenter/paper/show?paperid=be5348048dd263aced0f2bdc75a535e8&site=xueshu_se
+> * 代码地址：https://github.com/audier/my_ch_speech_recognition/tree/master/tutorial
 
 语言模型代码实践tutorial也有啦：
-基于CBHG结构:https://blog.csdn.net/chinatelecom08/article/details/85048019
-基于自注意力机制:https://blog.csdn.net/chinatelecom08/article/details/85051817
+> * 基于CBHG结构:https://blog.csdn.net/chinatelecom08/article/details/85048019
+> * 基于自注意力机制:https://blog.csdn.net/chinatelecom08/article/details/85051817
 
 ## 特征提取
 

@@ -15,7 +15,7 @@ LeNet5诞生于1994年，由Yann LeCun提出，充分考虑图像的相关性。
 
 #### 其结构如下图所示：
 
-![LeNet-5](./images/1576044235919.png)
+![LeNet-5](https://static.flyai.com/1576044235919.png)
 
 ### 各层介绍
 

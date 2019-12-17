@@ -10,7 +10,7 @@
 
 # ResNet-18网络结构
 
-![resnet18](./images/resnet18.png)
+![resnet18](https://static.flyai.com/resnet18.png)
 ResNet全名Residual Network残差网络。Kaiming He 的《[Deep Residual Learning for Image Recognition](https://arxiv.org/abs/1512.03385)》获得了CVPR最佳论文。他提出的深度残差网络在2015年可以说是洗刷了图像方面的各大比赛，以绝对优势取得了多个比赛的冠军。而且它在保证网络精度的前提下，将网络的深度达到了152层，后来又进一步加到1000的深度。论文的开篇先是说明了深度网络的好处：特征等级随着网络的加深而变高，网络的表达能力也会大大提高。因此论文中提出了一个问题：是否可以通过叠加网络层数来获得一个更好的网络呢？作者经过实验发现，单纯的把网络叠起来的深层网络的效果反而不如合适层数的较浅的网络效果。因此何恺明等人在普通平原网络的基础上增加了一个shortcut， 构成一个residual block。此时拟合目标就变为F(x)，F(x)就是残差：
 ![fx1](https://static.flyai.com/fx1.png)
 

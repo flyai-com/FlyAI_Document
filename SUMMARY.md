@@ -33,8 +33,5 @@
   * [基于深度学习的中文语音识别tutorial](blog/speech_rec_chinese_2.md)
   * [基于深度学习的中文语音识别系统框架](blog/speech_rec_chinese_3.md)
   * [使用DeepSpeech2进行语音识别](blog/DeepSpeech2.md)
-* [计算机视觉](blog/ji-suan-ji-shi-jue.md)
-* [自然语言处理](blog/zi-ran-yu-yan-chu-li.md)
-* [语音识别](blog/yu-yin-shi-bie.md)
 
 ## FlYAI视频课程 <a id="video"></a>

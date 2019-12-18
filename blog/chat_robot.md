@@ -20,31 +20,26 @@
 > * 问句解析：中文分词、词性标注、实体标注、概念类别标注、句法分析、语义分析、逻辑结构标注、指代消解、关联关系标注、问句分类、答案类别确定；
 > * 海量文本知识表示：网络文本资源获取、机器学习方法、大规模语义计算和推理、知识表示体系、知识库构建;
 > * 答案生成与过滤：候选答案抽取、关系推演、吻合程度判断、噪声过滤
->
-> # 用 TensorFlow 实现 Chatbot 的模型
->
-> 之前有根据 Siraj 的视频写过一篇[《自己动手写个聊天机器人吧》](https://www.jianshu.com/p/d0f4a751012b)，文章里只写了主函数的简单过程：Data－Model－Training，是用 Lua 实现的，详细的代码可以去他的  [github](https://github.com/llSourcell/Chatbot-AI) 上学习
-> 下面这篇文章是用 TensorFlow + tflearn 库 实现，在 建模， 训练 和 预测 等环节可以学到更多细节：
-> 学习资源：[自己动手做聊天机器人 三十八-原来聊天机器人是这么做出来的](http://www.shareditor.com/blogshow/?blogId=121)_
-> 两篇的共同点是都用了 Seq2Seq 来实现。
-> 建立模型阶段简要的流程图和过程描述：
->
+
+# 用 TensorFlow 实现 Chatbot 的模型
+之前有根据 Siraj 的视频写过一篇[《自己动手写个聊天机器人吧》](https://www.jianshu.com/p/d0f4a751012b)，文章里只写了主函数的简单过程：Data－Model－Training，是用 Lua 实现的，详细的代码可以去他的  [github](https://github.com/llSourcell/Chatbot-AI) 上学习
+下面这篇文章是用 TensorFlow + tflearn 库 实现，在 建模， 训练 和 预测 等环节可以学到更多细节：
+学习资源：[自己动手做聊天机器人 三十八-原来聊天机器人是这么做出来的](http://www.shareditor.com/blogshow/?blogId=121)_
+两篇的共同点是都用了 Seq2Seq 来实现。
+建立模型阶段简要的流程图和过程描述：
 > * 先将原始数据 300w chat 做一下预处理，即 切词，分为 问答对。
 > * 然后用 word2vec 训练出词向量，生成二进制的词向量文件。
 
 作为 Input data X 传入下面流程：
-
 > * question 进入 LSTM 的 encoder 环节，answer 进入 decoder 环节;
 > * 分别生成 output tensor;
 > * 其中 decoder 是一个词一个词的生成结果，将所有结果加入到一个 list 中;
 > * 最后和 encoder 的输出，一起做为下一环节 Regression 的输入，并传入 DNN 网络。
->
-> # 如何准备 chatbot 的训练数据
->
-> 学习资源：
-> [自己动手做聊天机器人 三十八-原来聊天机器人是这么做出来的](http://www.shareditor.com/blogshow/?blogId=121)
-> 训练数据的生成过程如下：
->
+
+# 如何准备 chatbot 的训练数据
+学习资源：
+[自己动手做聊天机器人 三十八-原来聊天机器人是这么做出来的](http://www.shareditor.com/blogshow/?blogId=121)
+训练数据的生成过程如下：
 > * 首先在 input file 里读取每一行，并根据 ‘｜’ 拆分成 question 和 answer 句子
 > * 每个句子，都将 word 通过 word2vec 转化成词向量
 > * 每一句的向量序列都转化成相同维度的形式：self.word_vec_dim * self.max_seq_len

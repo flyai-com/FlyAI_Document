@@ -45,3 +45,9 @@
   * [使用DeepSpeech2进行语音识别](blog/DeepSpeech2.md)
 
 ## FlYAI视频课程 <a id="video"></a>
+* [机器学习-吴恩达](blog/ml_Andew_Ng.md)
+* [深度学习-吴恩达](blog/dl_Andew_Ng.md)
+* [计算机视觉-CS231n](blog/cs231n.md)
+* [自然语言处理-CS224n](blog/cs224n.md)
+  
+  

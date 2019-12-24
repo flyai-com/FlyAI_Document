@@ -3,7 +3,7 @@
 # 目录
 ## 01.神经网络和深度学习
 ### 1.第一周 深度学习概论
-* [1.1 欢迎](https://static.flyai.com/video/deep-learning-Andew-Ng/1.1欢迎)
+* [1.1 欢迎](https://static.flyai.com/video/deep-learning-Andew-Ng/1.1welcome)
 * [1.2 什么是神经网络？]()
 * [1.3 用神经网络进行监督学习]()
 * [1.4 为什么深度学习会兴起？]()

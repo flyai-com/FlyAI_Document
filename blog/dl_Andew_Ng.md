@@ -29,7 +29,7 @@
 * [2.17 Jupyter _ ipython 笔记本的快速指南](https://static.flyai.com/video/deep-learning-Andew-Ng/2.17Jupyter_ipython笔记本的快速指南.mp4)
 * [2.18 （选修）logistic 损失函数的解释](https://static.flyai.com/video/deep-learning-Andew-Ng/2.18（选修）logistic损失函数的解释.mp4)
 ### 3.第三周 浅层神经网络
-* [3.1 神经网络概览](https://static.flyai.com/video/deep-learning-Andew-Ng/3.1神经网络概览.mp4)
+* [3.1 神经网络概览](https://static.flyai.com/video/deep-learning-Andew-Ng/1.1欢迎.mkv)
 * [3.2 神经网络表示](https://static.flyai.com/video/deep-learning-Andew-Ng/3.2神经网络表示.mp4)
 * [3.3 计算神经网络的输出](https://static.flyai.com/video/deep-learning-Andew-Ng/3.3计算神经网络的输出.mp4)
 * [3.4 多个例子中的向量化](https://static.flyai.com/video/deep-learning-Andew-Ng/3.4多个例子中的向量化.mp4)

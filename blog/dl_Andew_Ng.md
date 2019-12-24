@@ -23,10 +23,10 @@
 * [2.11 向量化](https://static.flyai.com/video/deep-learning-Andew-Ng/2.11向量化.mp4)
 * [2.12 向量化的更多例子](https://static.flyai.com/video/deep-learning-Andew-Ng/2.12向量化的更多例子.mp4)
 * [2.13 向量化 logistic 回归](https://static.flyai.com/video/deep-learning-Andew-Ng/2.13向量化logistic回归.mp4)
-* [2.14 向量化 logistic 回归的梯度输出](https://static.flyai.com/video/deep-learning-Andew-Ng/2.14 向量化logistic回归的梯度输出.mp4)
+* [2.14 向量化 logistic 回归的梯度输出](https://static.flyai.com/video/deep-learning-Andew-Ng/2.14向量化logistic回归的梯度输出.mp4)
 * [2.15 Python 中的广播](https://static.flyai.com/video/deep-learning-Andew-Ng/2.15Python中的广播.mp4)
-* [2.16 关于 python _ numpy 向量的说明](https://static.flyai.com/video/deep-learning-Andew-Ng/2.16关于python _ numpy向量的说明.mp4)
-* [2.17 Jupyter _ ipython 笔记本的快速指南](https://static.flyai.com/video/deep-learning-Andew-Ng/2.17Jupyter _ ipython笔记本的快速指南.mp4)
+* [2.16 关于 python _ numpy 向量的说明](https://static.flyai.com/video/deep-learning-Andew-Ng/2.16关于python_numpy向量的说明.mp4)
+* [2.17 Jupyter _ ipython 笔记本的快速指南](https://static.flyai.com/video/deep-learning-Andew-Ng/2.17Jupyter_ipython笔记本的快速指南.mp4)
 * [2.18 （选修）logistic 损失函数的解释](https://static.flyai.com/video/deep-learning-Andew-Ng/2.18（选修）logistic损失函数的解释.mp4)
 ### 3.第三周 浅层神经网络
 * [3.1 神经网络概览](https://static.flyai.com/video/deep-learning-Andew-Ng/3.1神经网络概览.mp4)

@@ -11,8 +11,8 @@
 ## FlYAI视频课程 <a id="video"></a>
 * [机器学习-吴恩达](blog/ml_Andew_Ng.md)
 * [深度学习-吴恩达](blog/dl_Andew_Ng.md)
-* [计算机视觉-CS231n](blog/cs231n.md)
-* [自然语言处理-CS224n](blog/cs224n.md)
+* [计算机视觉-斯坦福大学CS231n](blog/cs231n.md)
+* [自然语言处理-斯坦福大学CS224n](blog/cs224n.md)
 
 ## FlYAI优质文章 <a id="blog"></a>
 

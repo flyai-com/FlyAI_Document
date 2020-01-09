@@ -2,9 +2,9 @@
 
 * [第一次使用必读](README.md)
 * [常见问题](question.md)
-* [FlyAI本地调试代码指南](detail/dev_1.md)
-* [样例项目代码详细说明](detail/dev_2.md)
-* [预训练模型使用样例](detail/dev_3.md
+* [FlyAI本地调试代码指南](description/dev_1.md)
+* [样例项目代码详细说明](description/dev_2.md)
+* [预训练模型使用样例](description/dev_3.md)
 
 ## FlyAI使用说明 <a id="description"></a>
 

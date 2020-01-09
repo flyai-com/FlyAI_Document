@@ -34,6 +34,7 @@
 
 参赛选手还可以查看[样例项目代码详细说明](description/dev_2.md)
 
+
 比赛遇到问题不要着急可以添加FlyAI小助手微信，小姐姐在线解答您的问题。
 
 <img src="https://static.flyai.com/flyai_dir4.png" alt="FlyAI小助手微信二维码" style="zoom:50%;" />

@@ -1,6 +1,6 @@
 # Table of contents
 
-* [新手必读](README.md)
+* [第一次使用必读](README.md)
 * [常见问题](question.md)
 
 ## FlyAI使用说明 <a id="description"></a>

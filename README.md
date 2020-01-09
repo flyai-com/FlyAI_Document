@@ -32,7 +32,7 @@
   >
   >高分的参赛选手，可实时获取奖金，通过微信提现
 
-参赛选手还可以查看[样例项目代码详细说明](description/dev_2.md)
+参赛选手还可以查看[样例项目代码详细说明](https://doc.flyai.com/description/dev_2.html)
 
 比赛遇到问题不要着急可以添加FlyAI小助手微信，小姐姐在线解答您的问题。
 
@@ -100,7 +100,7 @@
   >
   > 引入新依赖时需要准确填写
 
-参赛选手还可以查看[样例项目代码详细说明](description/dev_2.md)
+参赛选手还可以查看[样例项目代码详细说明](https://doc.flyai.com/description/dev_2.html)
 
 #### 3.FlyAI的Python库文档
 
@@ -227,7 +227,7 @@ from flyai.utils import remote_helper
 path = remote_helper.get_remote_data('https://www.flyai.com/m/bert-base-uncased.tar.gz')
 ```
 
-具体使用请查看[预训练模型使用样例](description/dev_3.md)，其它高级使用方式，请选手自行查找。
+具体使用请查看[预训练模型使用样例](https://doc.flyai.com/description/dev_3.html)，其它高级使用方式，请选手自行查找。
 
 ##### flyai.utils的remote_helper方法
 

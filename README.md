@@ -1,9 +1,5 @@
 # 第一次使用必读
 
-### [FlyAI竞赛平台](https://www.flyai.com)
-
-### [![GPL LICENSE](https://badgen.net/badge/License/GPL/green)](https://www.gnu.org/licenses/gpl-3.0.zh-cn.html) [![GPL LICENSE](https://badgen.net/badge/Supported/TensorFlow,Keras,PyTorch/green?list=1)](https://flyai.com) [![GPL LICENSE](https://badgen.net/badge/Python/3.+/green)](https://flyai.com) [![GPL LICENSE](https://badgen.net/badge/Platform/Windows,macOS,Linux/green?list=1)](https://flyai.com)
-
 #### 1.参赛流程
 
 * 第一步：参赛选手从[FlyAI官网](https://www.flyai.com)选择比赛报名，可在线查看代码并下载代码
@@ -40,11 +36,11 @@
 
 比赛遇到问题不要着急可以添加FlyAI小助手微信，小姐姐在线解答您的问题。
 
-<img src="https://static.flyai.com/flyai_dir4.png" alt="image-20200109153211772" style="zoom:50%;" />
+<img src="https://static.flyai.com/flyai_dir4.png" alt="FlyAI小助手微信二维码" style="zoom:50%;" />
 
 #### 2.样例项目结构说明
 
-<img src="https://static.flyai.com/flyai_dir_2.png" alt="image-20200109111529731" style="zoom:50%;" />
+<img src="https://static.flyai.com/flyai_dir_2.png" alt="FlyAI项目目录" style="zoom:50%;" />
 
 
 
@@ -561,7 +557,6 @@ def get_remote_data(remote_name, unzip=True):
   img_path = 'img/851.jpg'
   p = model.predict(image_path=img_path)
   print(p)
-  
   ```
 
   
@@ -587,7 +582,6 @@ predictions = Dense(200, activation='softmax')(x)
 model = Model(inputs=densenet_notop.input, outputs=predictions)
 model.compile(...)
 model.fit_generator(...)
-
 ```
 
 ##### PyTorch预训练模型使用样例：
@@ -637,6 +631,3 @@ bert_vocab_file = os.path.join(data_root, 'vocab.txt')
 
 
 [![GPL LICENSE](https://www.flyai.com/images/coding.png)](https://flyai.com)
-
-
-

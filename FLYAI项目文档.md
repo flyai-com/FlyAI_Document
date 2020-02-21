@@ -1,8 +1,14 @@
 
 
-### [FlyAI竞赛平台](https://www.flyai.com)
+### $NAME
 
 ### [![GPL LICENSE](https://badgen.net/badge/License/GPL/green)](https://www.gnu.org/licenses/gpl-3.0.zh-cn.html) [![GPL LICENSE](https://badgen.net/badge/Supported/TensorFlow,Keras,PyTorch/green?list=1)](https://flyai.com) [![GPL LICENSE](https://badgen.net/badge/Python/3.+/green)](https://flyai.com) [![GPL LICENSE](https://badgen.net/badge/Platform/Windows,macOS,Linux/green?list=1)](https://flyai.com)
+
+### [项目官方网址](https://www.flyai.com/d/$DATAID)
+
+> $DESCRIPTION
+
+***
 
 #### 1.参赛流程
 
@@ -469,37 +475,37 @@ def get_remote_data(remote_name, unzip=True):
   > 可以自己定义输入输出的方法名，在`app.yaml`中声明即可。
   >
   > ```python
-  >  def input_x(self, $INPUT_PARAMS):
-  >      '''
-  >  	参数为csv中作为输入x的一条数据，该方法会被dataset.next_train_batch()
-  >  	和dataset.next_validation_batch()多次调用。可在该方法中做数据增强
-  >  	该方法字段与app.yaml中的input:->columns:对应
-  >  	'''
-  >      pass
+  > def input_x(self, $INPUT_PARAMS):
+  >   '''
+  > 	参数为csv中作为输入x的一条数据，该方法会被dataset.next_train_batch()
+  > 	和dataset.next_validation_batch()多次调用。可在该方法中做数据增强
+  > 	该方法字段与app.yaml中的input:->columns:对应
+  > 	'''
+  >   pass
   > 	
-  >  def output_x(self, $INPUT_PARAMS):
-  >       '''
-  >  	参数为csv中作为输入x的一条数据，该方法会被dataset.next_train_batch()
-  >  	和dataset.next_validation_batch()多次调用。
-  >  	该方法字段与app.yaml中的input:->columns:对应
-  >  	'''
-  >      pass
-  >  
-  >  def input_y(self, $OUTPUT_PARAMS):
-  >      '''
-  >      参数为csv中作为输入y的一条数据，该方法会被dataset.next_train_batch()
-  >  	和dataset.next_validation_batch()多次调用。
-  >  	该方法字段与app.yaml中的output:->columns:对应
-  >      '''
-  >      pass
-  >  
-  >  def output_y(self, data):
-  >      '''
-  >      输出的结果，会被dataset.to_categorys(data)调用
-  >      :param data: 预测返回的数据
-  >      :return: 返回预测的标签
-  >      '''
-  >      pass
+  > def output_x(self, $INPUT_PARAMS):
+  >    '''
+  > 	参数为csv中作为输入x的一条数据，该方法会被dataset.next_train_batch()
+  > 	和dataset.next_validation_batch()多次调用。
+  > 	该方法字段与app.yaml中的input:->columns:对应
+  > 	'''
+  >   pass
+  > 
+  > def input_y(self, $OUTPUT_PARAMS):
+  >   '''
+  >   参数为csv中作为输入y的一条数据，该方法会被dataset.next_train_batch()
+  > 	和dataset.next_validation_batch()多次调用。
+  > 	该方法字段与app.yaml中的output:->columns:对应
+  >   '''
+  >   pass
+  > 
+  > def output_y(self, data):
+  >   '''
+  >   输出的结果，会被dataset.to_categorys(data)调用
+  >   :param data: 预测返回的数据
+  >   :return: 返回预测的标签
+  >   '''
+  >   pass
   > 
   > ```
 
@@ -513,36 +519,36 @@ def get_remote_data(remote_name, unzip=True):
   >
   > ```python
   > def predict(self, **data):
-  >      '''
-  >      	使用模型
-  >    		:param data: 模型的输入的一个或多个参数
-  >      	:return:
-  >      '''
-  >      pass
+  >   '''
+  >   	使用模型
+  > 		:param data: 模型的输入的一个或多个参数
+  >   	:return:
+  >   '''
+  >   pass
   > 
-  >  def predict_all(self, datas):
-  >      '''
-  >      （必须实现的方法）评估模型，对训练的好的模型进行打分
-  >    		:param datas: 验证集上的随机数据，类型为list
-  >      	:return outputs: 返回调用模型评估之后的list数据
-  >      '''
-  >      pass
+  > def predict_all(self, datas):
+  >   '''
+  >   （必须实现的方法）评估模型，对训练的好的模型进行打分
+  > 		:param datas: 验证集上的随机数据，类型为list
+  >   	:return outputs: 返回调用模型评估之后的list数据
+  >   '''
+  >   pass
   > 
-  >  def save_model(self, network, path=MODEL_PATH, name=MODEL_NAME, overwrite=False):
-  >      '''
-  >      保存模型
-  >      :param network: 训练模型的网络
-  >      :param path: 要保存模型的路径
-  >      :param name: 要保存模型的名字
-  >      :param overwrite: 是否覆盖当前模型
-  >      :return:
-  >      '''
-  >      self.check(path, overwrite)
+  > def save_model(self, network, path=MODEL_PATH, name=MODEL_NAME, overwrite=False):
+  >   '''
+  >   保存模型
+  >   :param network: 训练模型的网络
+  >   :param path: 要保存模型的路径
+  >   :param name: 要保存模型的名字
+  >   :param overwrite: 是否覆盖当前模型
+  >   :return:
+  >   '''
+  >   self.check(path, overwrite)
   > 
   > ```
-  
+
   predict_all的参数格式
-  
+
   ```python
   from flyai.dataset import Dataset
   from model import Model
@@ -562,7 +568,7 @@ def get_remote_data(remote_name, unzip=True):
   p = model.predict(image_path=img_path)
   print(p)
   ```
-  
+
   
 
 ***

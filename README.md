@@ -394,7 +394,7 @@ def get_remote_data(remote_name, unzip=True):
 
 #### <a name="div_n">Mac和Linux调试</a>
 
-#####方式一：命令行调试
+##### 方式一：命令行调试
 
 ##### 1. 下载项目并解压
 

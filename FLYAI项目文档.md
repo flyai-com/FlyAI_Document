@@ -304,13 +304,19 @@ def get_remote_data(remote_name, unzip=True):
 
 > 运行flyai.exe程序，点击"本地调试"按钮，输入循环次数和数据量，点击运行即可调用main.py
 >
-> 如果使用本地IDE开发，需要执行安装“flyai”依赖并导入项目，运行main.py 
+> 如果出现 No Model Name "xxx"错误，需在 requirements.txt 填写项目依赖
+>
+> 如果使用本地IDE开发，需要安装“flyai”依赖并导入项目，运行main.py 
 
 ##### 4.下载本地测试数据
 
 > 运行flyai.exe程序，点击"下载数据"按钮，程序会下载100条调试数据
 
-##### 4.提交训练到GPU
+##### 4.提交到GPU训练
+
+项目中有新的Python包引用，必须在 requirements.txt 文件中指定包名，否则线上运行会找不到包。
+
+不填写版本号将默认安装最新版
 
 > 运行flyai.exe程序，点击"提交到GPU"按钮，输入循环次数和数据量，点击运行即可提交到GPU训练。
 
@@ -318,7 +324,31 @@ def get_remote_data(remote_name, unzip=True):
 
 训练结束会以微信和邮件的形式发送结果通知
 
-#### 方式二：windows命令行调试
+#### 方式二：使用Jupyter调试
+
+运行flyai.exe程序，扫码登录之后
+
+点击"使用jupyter调试"按钮，一键打开jupyter lab 操作界面
+
+##### 1.本地运行
+
+在jupter中运行 run main.py 命令即可在本地训练调试代码
+
+如果出现 No Model Name "xxx"错误，需在 requirements.txt 填写项目依赖
+
+##### 2.提交到GPU训练
+
+项目中有新的Python包引用，必须在 requirements.txt 文件中指定包名，否则线上运行会找不到包。
+
+不填写版本号将默认安装最新版
+
+在jupyter环境下运行  ! flyai.exe train -e=10 -b=32云端GPU免费训练
+
+> 返回sucess状态，代表提交离线训练成功
+>
+> 训练结束会以微信和邮件的形式发送结果通知
+
+#### 方式三：windows命令行调试
 
 ##### 1. 下载项目并解压
 
@@ -342,13 +372,15 @@ def get_remote_data(remote_name, unzip=True):
 
 执行test命令，会自动下载100条测试数据到项目下
 
-安装项目所需依赖，并运行 main.py
+如果出现 No Model Name "xxx"错误，需在 requirements.txt 填写项目依赖
 
 如果使用本地IDE开发，可以自行安装 requirements.txt 中的依赖，运行 main.py 即可
 
-##### 5.提交训练到GPU
+##### 5.提交到GPU训练
 
-项目中如有新的引用，需加入到 requirements.txt 文件中
+项目中有新的Python包引用，必须在 requirements.txt 文件中指定包名，否则线上运行会找不到包。
+
+不填写版本号将默认安装最新版
 
 在终端下执行
 
@@ -363,16 +395,6 @@ def get_remote_data(remote_name, unzip=True):
 > flyai.exe train -b=32 -e=10
 
 通过执行训练命令，整个数据集循环10次，每次训练读取的数据量为 32 。
-
-#### 方式三：使用Jupyter调试
-
-运行flyai.exe程序
-
-扫码登录之后
-
-点击"使用jupyter调试"按钮，一键打开jupyter lab 操作界面
-
-在jupter中运行 run main.py 命令即可在本地训练调试代码
 
 ***
 
@@ -398,21 +420,23 @@ def get_remote_data(remote_name, unzip=True):
 
 执行下列命令本地安装环境并调试（第一次使用需要使用微信扫码登录）
 
-> ./flyai  test   注意：命令前面不要加sudo
+> ./flyai  test   注意:如果pip安装中出现 permission denied 错误，需使用sudo运行
 
 执行test命令，会自动下载100条测试数据到项目下
 
-安装项目所需依赖，并运行 main.py
+如果出现 No Model Name "xxx"错误，需在 requirements.txt 填写项目依赖
 
 如果使用本地IDE开发，可以自行安装 requirements.txt 中的依赖，运行 main.py 即可
 
-##### 5.提交训练到GPU
+##### 5.提交到GPU训练
 
-项目中如有新的引用，需加入到 requirements.txt 文件中
+项目中有新的Python包引用，必须在 requirements.txt 文件中指定包名，否则线上运行会找不到包。
+
+不填写版本号将默认安装最新版
 
 在终端下执行
 
-> ./flyai train 注意：命令前面不要加sudo
+> ./flyai train 
 
 返回sucess状态，代表提交离线训练成功
 
@@ -426,11 +450,39 @@ def get_remote_data(remote_name, unzip=True):
 
 ##### 方式二：使用Jupyter调试
 
-> 在终端执行命令 ./flyai ide 打开调试环境
+在终端执行命令 ./flyai ide 打开调试环境，扫码登录成功之后
+
+##### 1.本地运行
+
+在jupter中运行 run main.py 命令即可在本地训练调试代码
+
+如果出现 No Model Name "xxx"错误，需在 requirements.txt 填写项目依赖
+
+##### 2.提交到GPU训练
+
+项目中有新的Python包引用，必须在 requirements.txt 文件中指定包名，否则线上运行会找不到包。
+
+不填写版本号将默认安装最新版
+
+在jupyter环境下运行  ! ./flyai train -e=10 -b=32  将代码提交到云端GPU免费训练
+
+> 返回sucess状态，代表提交离线训练成功
 >
-> 扫码登录成功之后
+> 训练结束会以微信和邮件的形式发送结果通知
+
+### 设置自己的Python环境
+
+##### Windows用户
+
+> flyai.exe path=xxx 可以设置自己的Python路径
 >
-> 在jupter中运行 run main.py 命令即可在本地训练调试代码
+> flyai.exe path=flyai 恢复系统默认Pyton路径
+
+##### Mac/linux用户
+
+> ./flyai path=xxx 可以设置自己的Python路径
+>
+> ./flyai path=flyai 恢复系统默认Pyton路径
 
 ***
 
@@ -475,37 +527,37 @@ def get_remote_data(remote_name, unzip=True):
   > 可以自己定义输入输出的方法名，在`app.yaml`中声明即可。
   >
   > ```python
-  > def input_x(self, $INPUT_PARAMS):
-  >   '''
-  > 	参数为csv中作为输入x的一条数据，该方法会被dataset.next_train_batch()
-  > 	和dataset.next_validation_batch()多次调用。可在该方法中做数据增强
-  > 	该方法字段与app.yaml中的input:->columns:对应
-  > 	'''
-  >   pass
-  > 	
-  > def output_x(self, $INPUT_PARAMS):
-  >    '''
-  > 	参数为csv中作为输入x的一条数据，该方法会被dataset.next_train_batch()
-  > 	和dataset.next_validation_batch()多次调用。
-  > 	该方法字段与app.yaml中的input:->columns:对应
-  > 	'''
-  >   pass
-  > 
-  > def input_y(self, $OUTPUT_PARAMS):
-  >   '''
-  >   参数为csv中作为输入y的一条数据，该方法会被dataset.next_train_batch()
-  > 	和dataset.next_validation_batch()多次调用。
-  > 	该方法字段与app.yaml中的output:->columns:对应
-  >   '''
-  >   pass
-  > 
-  > def output_y(self, data):
-  >   '''
-  >   输出的结果，会被dataset.to_categorys(data)调用
-  >   :param data: 预测返回的数据
-  >   :return: 返回预测的标签
-  >   '''
-  >   pass
+  >  def input_x(self, $INPUT_PARAMS):
+  >      '''
+  >      参数为csv中作为输入x的一条数据，该方法会被dataset.next_train_batch()
+  >      和dataset.next_validation_batch()多次调用。可在该方法中做数据增强
+  >      该方法字段与app.yaml中的input:->columns:对应
+  >      '''
+  >      pass
+  >     
+  >  def output_x(self, $INPUT_PARAMS):
+  >       '''
+  >      参数为csv中作为输入x的一条数据，该方法会被dataset.next_train_batch()
+  >      和dataset.next_validation_batch()多次调用。
+  >      该方法字段与app.yaml中的input:->columns:对应
+  >      '''
+  >      pass
+  >  
+  >  def input_y(self, $OUTPUT_PARAMS):
+  >      '''
+  >      参数为csv中作为输入y的一条数据，该方法会被dataset.next_train_batch()
+  >      和dataset.next_validation_batch()多次调用。
+  >      该方法字段与app.yaml中的output:->columns:对应
+  >      '''
+  >      pass
+  >  
+  >  def output_y(self, data):
+  >      '''
+  >      输出的结果，会被dataset.to_categorys(data)调用
+  >      :param data: 预测返回的数据
+  >      :return: 返回预测的标签
+  >      '''
+  >      pass
   > 
   > ```
 
@@ -519,36 +571,36 @@ def get_remote_data(remote_name, unzip=True):
   >
   > ```python
   > def predict(self, **data):
-  >   '''
-  >   	使用模型
-  > 		:param data: 模型的输入的一个或多个参数
-  >   	:return:
-  >   '''
-  >   pass
+  >      '''
+  >          使用模型
+  >            :param data: 模型的输入的一个或多个参数
+  >          :return:
+  >      '''
+  >      pass
   > 
-  > def predict_all(self, datas):
-  >   '''
-  >   （必须实现的方法）评估模型，对训练的好的模型进行打分
-  > 		:param datas: 验证集上的随机数据，类型为list
-  >   	:return outputs: 返回调用模型评估之后的list数据
-  >   '''
-  >   pass
+  >  def predict_all(self, datas):
+  >      '''
+  >      （必须实现的方法）评估模型，对训练的好的模型进行打分
+  >            :param datas: 验证集上的随机数据，类型为list
+  >          :return outputs: 返回调用模型评估之后的list数据
+  >      '''
+  >      pass
   > 
-  > def save_model(self, network, path=MODEL_PATH, name=MODEL_NAME, overwrite=False):
-  >   '''
-  >   保存模型
-  >   :param network: 训练模型的网络
-  >   :param path: 要保存模型的路径
-  >   :param name: 要保存模型的名字
-  >   :param overwrite: 是否覆盖当前模型
-  >   :return:
-  >   '''
-  >   self.check(path, overwrite)
+  >  def save_model(self, network, path=MODEL_PATH, name=MODEL_NAME, overwrite=False):
+  >      '''
+  >      保存模型
+  >      :param network: 训练模型的网络
+  >      :param path: 要保存模型的路径
+  >      :param name: 要保存模型的名字
+  >      :param overwrite: 是否覆盖当前模型
+  >      :return:
+  >      '''
+  >      self.check(path, overwrite)
   > 
   > ```
-
+  
   predict_all的参数格式
-
+  
   ```python
   from flyai.dataset import Dataset
   from model import Model
@@ -568,7 +620,7 @@ def get_remote_data(remote_name, unzip=True):
   p = model.predict(image_path=img_path)
   print(p)
   ```
-
+  
   
 
 ***
@@ -641,6 +693,5 @@ bert_vocab_file = os.path.join(data_root, 'vocab.txt')
 
 
 [![GPL LICENSE](https://www.flyai.com/images/coding.png)](https://flyai.com)
-
 
 

@@ -298,13 +298,19 @@ def get_remote_data(remote_name, unzip=True):
 
 > 运行flyai.exe程序，点击"本地调试"按钮，输入循环次数和数据量，点击运行即可调用main.py
 >
-> 如果使用本地IDE开发，需要执行安装“flyai”依赖并导入项目，运行main.py 
+> 如果出现 No Model Name "xxx"错误，需在 requirements.txt 填写项目依赖
+>
+> 如果使用本地IDE开发，需要安装“flyai”依赖并导入项目，运行main.py 
 
 ##### 4.下载本地测试数据
 
 > 运行flyai.exe程序，点击"下载数据"按钮，程序会下载100条调试数据
 
-##### 4.提交训练到GPU
+##### 4.提交到GPU训练
+
+项目中有新的Python包引用，必须在 requirements.txt 文件中指定包名，否则线上运行会找不到包。
+
+不填写版本号将默认安装最新版
 
 > 运行flyai.exe程序，点击"提交到GPU"按钮，输入循环次数和数据量，点击运行即可提交到GPU训练。
 
@@ -312,7 +318,31 @@ def get_remote_data(remote_name, unzip=True):
 
 训练结束会以微信和邮件的形式发送结果通知
 
-#### 方式二：windows命令行调试
+#### 方式二：使用Jupyter调试
+
+运行flyai.exe程序，扫码登录之后
+
+点击"使用jupyter调试"按钮，一键打开jupyter lab 操作界面
+
+##### 1.本地运行
+
+在jupter中运行 run main.py 命令即可在本地训练调试代码
+
+如果出现 No Model Name "xxx"错误，需在 requirements.txt 填写项目依赖
+
+##### 2.提交到GPU训练
+
+项目中有新的Python包引用，必须在 requirements.txt 文件中指定包名，否则线上运行会找不到包。
+
+不填写版本号将默认安装最新版
+
+在jupyter环境下运行  ! flyai.exe train -e=10 -b=32云端GPU免费训练
+
+> 返回sucess状态，代表提交离线训练成功
+>
+> 训练结束会以微信和邮件的形式发送结果通知
+
+#### 方式三：windows命令行调试
 
 ##### 1. 下载项目并解压
 
@@ -336,13 +366,15 @@ def get_remote_data(remote_name, unzip=True):
 
 执行test命令，会自动下载100条测试数据到项目下
 
-安装项目所需依赖，并运行 main.py
+如果出现 No Model Name "xxx"错误，需在 requirements.txt 填写项目依赖
 
 如果使用本地IDE开发，可以自行安装 requirements.txt 中的依赖，运行 main.py 即可
 
-##### 5.提交训练到GPU
+##### 5.提交到GPU训练
 
-项目中如有新的引用，需加入到 requirements.txt 文件中
+项目中有新的Python包引用，必须在 requirements.txt 文件中指定包名，否则线上运行会找不到包。
+
+不填写版本号将默认安装最新版
 
 在终端下执行
 
@@ -357,16 +389,6 @@ def get_remote_data(remote_name, unzip=True):
 > flyai.exe train -b=32 -e=10
 
 通过执行训练命令，整个数据集循环10次，每次训练读取的数据量为 32 。
-
-#### 方式三：使用Jupyter调试
-
-运行flyai.exe程序
-
-扫码登录之后
-
-点击"使用jupyter调试"按钮，一键打开jupyter lab 操作界面
-
-在jupter中运行 run main.py 命令即可在本地训练调试代码
 
 ***
 
@@ -392,21 +414,23 @@ def get_remote_data(remote_name, unzip=True):
 
 执行下列命令本地安装环境并调试（第一次使用需要使用微信扫码登录）
 
-> ./flyai  test   注意：命令前面不要加sudo
+> ./flyai  test   注意:如果pip安装中出现 permission denied 错误，需使用sudo运行
 
 执行test命令，会自动下载100条测试数据到项目下
 
-安装项目所需依赖，并运行 main.py
+如果出现 No Model Name "xxx"错误，需在 requirements.txt 填写项目依赖
 
 如果使用本地IDE开发，可以自行安装 requirements.txt 中的依赖，运行 main.py 即可
 
-##### 5.提交训练到GPU
+##### 5.提交到GPU训练
 
-项目中如有新的引用，需加入到 requirements.txt 文件中
+项目中有新的Python包引用，必须在 requirements.txt 文件中指定包名，否则线上运行会找不到包。
+
+不填写版本号将默认安装最新版
 
 在终端下执行
 
-> ./flyai train 注意：命令前面不要加sudo
+> ./flyai train 
 
 返回sucess状态，代表提交离线训练成功
 
@@ -420,11 +444,39 @@ def get_remote_data(remote_name, unzip=True):
 
 ##### 方式二：使用Jupyter调试
 
-> 在终端执行命令 ./flyai ide 打开调试环境
+在终端执行命令 ./flyai ide 打开调试环境，扫码登录成功之后
+
+##### 1.本地运行
+
+在jupter中运行 run main.py 命令即可在本地训练调试代码
+
+如果出现 No Model Name "xxx"错误，需在 requirements.txt 填写项目依赖
+
+##### 2.提交到GPU训练
+
+项目中有新的Python包引用，必须在 requirements.txt 文件中指定包名，否则线上运行会找不到包。
+
+不填写版本号将默认安装最新版
+
+在jupyter环境下运行  ! ./flyai train -e=10 -b=32  将代码提交到云端GPU免费训练
+
+> 返回sucess状态，代表提交离线训练成功
 >
-> 扫码登录成功之后
+> 训练结束会以微信和邮件的形式发送结果通知
+
+### 设置自己的Python环境
+
+##### Windows用户
+
+> flyai.exe path=xxx 可以设置自己的Python路径
 >
-> 在jupter中运行 run main.py 命令即可在本地训练调试代码
+> flyai.exe path=flyai 恢复系统默认Pyton路径
+
+##### Mac/linux用户
+
+> ./flyai path=xxx 可以设置自己的Python路径
+>
+> ./flyai path=flyai 恢复系统默认Pyton路径
 
 ***
 

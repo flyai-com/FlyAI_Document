@@ -2,11 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="08097f44-fdbf-41ea-bf21-d38adf843f79" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/FlyAI_Document.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FLYAI项目文档.md" beforeDir="false" afterPath="$PROJECT_DIR$/FLYAI项目文档.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guide_darwin.md" beforeDir="false" afterPath="$PROJECT_DIR$/guide_darwin.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/guide_windows_client.md" beforeDir="false" afterPath="$PROJECT_DIR$/guide_windows_client.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/FlyAI项目规文档.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/guide_windows_command.md" beforeDir="false" afterPath="$PROJECT_DIR$/guide_windows_command.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -17,30 +14,12 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/README.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="825">
-                <caret line="691" lean-forward="true" selection-start-line="6" selection-end-line="691" />
-                <folding>
-                  <element signature="e#0#33#0" expanded="true" />
-                  <element signature="e#0#39#0" expanded="true" />
-                  <element signature="e#0#18#0" expanded="true" />
-                  <element signature="e#0#23#0" expanded="true" />
-                </folding>
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/FLYAI项目文档.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="-7690">
-                <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+              <first_editor relative-caret-position="435">
+                <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
                 <folding>
                   <element signature="e#0#33#0" expanded="true" />
                   <element signature="e#0#39#0" expanded="true" />
@@ -53,14 +32,16 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/pytorch_template/flyai">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/keras_template/flyai">
-          <provider selected="true" editor-type-id="text-editor" />
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/FlyAI项目规文档.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor>
+                <caret selection-end-line="1" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -75,6 +56,31 @@
               <first_editor relative-caret-position="450">
                 <caret line="30" selection-start-line="30" selection-end-line="30" />
               </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/gitbook.log">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/question.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor />
               <second_editor />
             </state>
           </provider>
@@ -123,27 +129,17 @@
       </list>
     </option>
   </component>
-  <component name="ProjectConfigurationFiles">
-    <option name="files">
-      <list>
-        <option value="$PROJECT_DIR$/.idea/FlyAI_Document.iml" />
-        <option value="$PROJECT_DIR$/.idea/misc.xml" />
-        <option value="$PROJECT_DIR$/.idea/modules.xml" />
-        <option value="$PROJECT_DIR$/.idea/vcs.xml" />
-      </list>
-    </option>
-  </component>
-  <component name="ProjectFrameBounds" fullScreen="true">
-    <option name="x" value="-47" />
-    <option name="y" value="-1050" />
-    <option name="width" value="1680" />
-    <option name="height" value="1050" />
+  <component name="ProjectFrameBounds">
+    <option name="y" value="23" />
+    <option name="width" value="1440" />
+    <option name="height" value="877" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -155,10 +151,10 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
@@ -195,6 +191,8 @@
       <workItem from="1582269956006" duration="9000" />
       <workItem from="1582273040513" duration="132000" />
       <workItem from="1582273220641" duration="221000" />
+      <workItem from="1583589804041" duration="57000" />
+      <workItem from="1584349378087" duration="260000" />
     </task>
     <task id="LOCAL-00001" summary="添加模版，更新文档">
       <created>1582268864267</created>
@@ -207,12 +205,13 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1191000" />
+    <option name="totallyTimeSpent" value="1508000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-47" y="-1050" width="1680" height="1050" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25885227" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26609442" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -247,6 +246,19 @@
     <entry file="file://$PROJECT_DIR$/pytorch_template/flyai">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
+    <entry file="file://$PROJECT_DIR$/README.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="750">
+            <caret line="655" selection-start-line="655" selection-end-line="655" />
+            <folding>
+              <element signature="e#0#23#0" expanded="true" />
+            </folding>
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/keras_template/flyai">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -259,6 +271,25 @@
           <first_editor relative-caret-position="450">
             <caret line="30" selection-start-line="30" selection-end-line="30" />
           </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/gitbook.log">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/question.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/SUMMARY.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor />
           <second_editor />
         </state>
       </provider>
@@ -285,8 +316,8 @@
     <entry file="file://$PROJECT_DIR$/FLYAI项目文档.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="-7690">
-            <caret line="29" column="3" lean-forward="true" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
+          <first_editor relative-caret-position="435">
+            <caret line="29" column="3" selection-start-line="29" selection-start-column="3" selection-end-line="29" selection-end-column="3" />
             <folding>
               <element signature="e#0#33#0" expanded="true" />
               <element signature="e#0#39#0" expanded="true" />
@@ -298,17 +329,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
+    <entry file="file://$PROJECT_DIR$/FlyAI项目规文档.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="825">
-            <caret line="691" lean-forward="true" selection-start-line="6" selection-end-line="691" />
-            <folding>
-              <element signature="e#0#33#0" expanded="true" />
-              <element signature="e#0#39#0" expanded="true" />
-              <element signature="e#0#18#0" expanded="true" />
-              <element signature="e#0#23#0" expanded="true" />
-            </folding>
+          <first_editor>
+            <caret selection-end-line="1" />
           </first_editor>
           <second_editor />
         </state>

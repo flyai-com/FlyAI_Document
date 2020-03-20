@@ -12,6 +12,8 @@
 
 #### 1.参赛流程
 
+	> 本地使用的FlyAI Python库版本需要大于等于0.6.4
+
 * 第一步：参赛选手从[FlyAI官网](https://www.flyai.com)选择比赛报名，可在线查看代码并下载代码
 
   > 下载的项目中不包含数据集，运行main.py会自动下载调试数据集
@@ -21,14 +23,14 @@
 * 第二步：本地代码调试
 
   > 本地配置Python3.5以上的运行环境，并安装项目运行所需的Python依赖包
-  >app.json是项目的配置文件
-  > 
-  >在main.py中编写神经网络，没有框架限制
-  > 
-  >在prediction.py测试模型是否评估成功
-  > 
-  >main.py中需在class Main(FlyAI) 类中实现自己的的训练过程
-  
+  > app.json是项目的配置文件
+  >
+  > 在main.py中编写神经网络，没有框架限制
+  >
+  > 在prediction.py测试模型是否评估成功
+  >
+  > main.py中需在class Main(FlyAI) 类中实现自己的的训练过程
+
 * 第三步：提交到GPU训练，保存模型
 
   >本地调试完成之后，提交代码到GPU，在全量数据上训练模型，保存最优模型。
@@ -101,7 +103,7 @@
 
 FlyAI的库和其它Python库的安装方法一样，使用PIP工具安装
 
-> windows用户：pip所在路径pip.exe install -i https://pypi.flyai.com/simple flyai==0.6.4
+> windows用户：pip所在路径pip.exe install -i https://pypi.flyai.com/simple flyai==0.6.6
 >
 > mac和linux用户：pip所在路径/pip install -i https://pypi.flyai.com/simple flyai==0.6.4
 
@@ -119,6 +121,8 @@ data_helper.download_from_ids("data_id xxxx")
 # 二选一或者根据app.json的配置下载文件
 data_helper.download_from_json()
 ```
+
+##### 新的数据集会下载到 `.data/input/data_id_xxx/ `目录下
 
 ***
 
@@ -157,40 +161,40 @@ data_helper.download_from_json()
   > 
   > #继承 flyai.framework 中的 FlyAI模板类
   > class Main(FlyAI):
-  >  '''
-  >  项目中必须继承FlyAI类，否则线上运行会报错。
-  >  '''
-  >  def download_data(self):
-  >      '''
-  >      下载数据
-  >      :return:
-  >      '''
-  >      data_helper = DataHelper()
+  > '''
+  > 项目中必须继承FlyAI类，否则线上运行会报错。
+  > '''
+  > def download_data(self):
+  >   '''
+  >   下载数据
+  >   :return:
+  >   '''
+  >   data_helper = DataHelper()
   > 		 # 根据数据ID下载训练数据
-  >      data_helper.download_from_ids("data_id xxxx")
-  >      # 二选一或者根据app.json的配置下载文件
-  >      data_helper.download_from_json()
-  >        
-  >  def deal_with_data(self):
-  >      '''
-  >      处理数据，如果没有可以不实现。
-  >      :return:
-  >      '''
-  >      pass
+  >   data_helper.download_from_ids("data_id xxxx")
+  >   # 二选一或者根据app.json的配置下载文件
+  >   data_helper.download_from_json()
+  >     
+  > def deal_with_data(self):
+  >   '''
+  >   处理数据，如果没有可以不实现。
+  >   :return:
+  >   '''
+  >   pass
   > 
-  >  def train(self):
-  >      '''
-  >      训练模型，必须实现此方法
-  >      :return:
-  >      '''
-  >      pass
+  > def train(self):
+  >   '''
+  >   训练模型，必须实现此方法
+  >   :return:
+  >   '''
+  >   pass
   > 
   > 
   > if __name__ == '__main__':
-  >  main = Main()
-  >  main.download_data()
-  >  main.deal_with_data()
-  >  main.train()
+  > main = Main()
+  > main.download_data()
+  > main.deal_with_data()
+  > main.train()
   > 
   > ```
   >
@@ -209,19 +213,19 @@ data_helper.download_from_json()
   > 
   > #继承FlyAI实现加载模型和预测方法
   > class Prediction(FlyAI):
-  >     def load_model(self):
-  >         '''
-  >         模型初始化，必须在此方法中加载模型
-  >         '''
-  >         pass
+  >  def load_model(self):
+  >      '''
+  >      模型初始化，必须在此方法中加载模型
+  >      '''
+  >      pass
   > 
-  >     def predict(self, **input_data):
-  >         '''
-  >         模型预测返回结果
-  >         :param input: 评估传入样例，是key-value字典类型 例如：{"user_id": 31031, "post_id": 3530, "create_post_user_id": 27617, "post_text": "心情棒棒哒"}
-  >         :return: 模型预测成功返回，也是字典类型 例如：{"label": 0}
-  >         '''
-  >         return 返回的例子 {"label": 0}
+  >  def predict(self, **input_data):
+  >      '''
+  >      模型预测返回结果
+  >      :param input: 评估传入样例，是key-value字典类型 例如：{"user_id": 31031, "post_id": 3530, "create_post_user_id": 27617, "post_text": "心情棒棒哒"}
+  >      :return: 模型预测成功返回，也是字典类型 例如：{"label": 0}
+  >      '''
+  >      return 返回的例子 {"label": 0}
   > ```
 
 * `path.py`
@@ -301,15 +305,15 @@ def get_remote_data(remote_name, unzip=True):
 >
 >- windows用户:
 >
->  C://Users//{你计算机用户名}//.flyai//env//python.exe
+> C://Users//{你计算机用户名}//.flyai//env//python.exe
 >
->  C://Users//{你计算机用户名}///.flyai//env//Scriptspip.exe
+> C://Users//{你计算机用户名}///.flyai//env//Scriptspip.exe
 >
 >- mac和linux用户:
 >
->  /Users/{你计算机用户名}/.flyai/env/bin/python3.6
+> /Users/{你计算机用户名}/.flyai/env/bin/python3.6
 >
->  /Users/{你计算机用户名}/.flyai/env/bin/pip
+> /Users/{你计算机用户名}/.flyai/env/bin/pip
 
 其它更多常见问题，请访问文档中心查看:[常见问题](https://doc.flyai.com/question.html)
 
@@ -581,5 +585,4 @@ bert_vocab_file = os.path.join(data_root, 'vocab.txt')
 
 
 [![GPL LICENSE](https://www.flyai.com/images/coding.png)](https://flyai.com)
-
 

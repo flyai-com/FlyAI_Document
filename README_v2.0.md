@@ -1,12 +1,14 @@
 
 
-### [FlyAI竞赛平台](https://www.flyai.com)
+### [FlyAI2.0竞赛框架使用说明](https://www.flyai.com)
 
 ### [![GPL LICENSE](https://badgen.net/badge/License/GPL/green)](https://www.gnu.org/licenses/gpl-3.0.zh-cn.html) [![GPL LICENSE](https://badgen.net/badge/Supported/TensorFlow,Keras,PyTorch/green?list=1)](https://flyai.com) [![GPL LICENSE](https://badgen.net/badge/Python/3.+/green)](https://flyai.com) [![GPL LICENSE](https://badgen.net/badge/Platform/Windows,macOS,Linux/green?list=1)](https://flyai.com)
 
 ***
 
 #### 1.参赛流程
+
+	> 本地使用的FlyAI Python库版本需要大于等于0.6.4
 
 * 第一步：参赛选手从[FlyAI官网](https://www.flyai.com)选择比赛报名，可在线查看代码并下载代码
 
@@ -97,7 +99,7 @@
 
 FlyAI的库和其它Python库的安装方法一样，使用PIP工具安装
 
-> windows用户：pip所在路径pip.exe install -i https://pypi.flyai.com/simple flyai==0.6.4
+> windows用户：pip所在路径pip.exe install -i https://pypi.flyai.com/simple flyai==0.6.6
 >
 > mac和linux用户：pip所在路径/pip install -i https://pypi.flyai.com/simple flyai==0.6.4
 
@@ -115,6 +117,8 @@ data_helper.download_from_ids("data_id xxxx")
 # 二选一或者根据app.json的配置下载文件
 data_helper.download_from_json()
 ```
+
+##### 新的数据集会下载到 `.data/input/data_id_xxx/ `目录下
 
 ***
 

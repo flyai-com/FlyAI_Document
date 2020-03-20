@@ -1,6 +1,7 @@
 # Table of contents
 
 * [第一次使用必读](README.md)
+* [FlyAI2.0竞赛框架更新说明](README_v2.0.md)
 * [常见问题](question.md)
 * [FlyAI本地调试代码指南](description/dev_1.md)
 * [样例项目代码详细说明](description/dev_2.md)

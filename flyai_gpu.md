@@ -85,11 +85,9 @@ sava_train_model(model_file="./data/output/你的服务器上模型的名字", d
 
 
 
-### [FlyAI全球人工智能专业开发平台，一站式服务平台](https://flyai.com)
+使用过程遇到问题不要着急，可以添加FlyAI小助手微信，小姐姐在线解答您的问题。
 
-**扫描下方二维码，及时获取FlyAI最新消息，抢先体验最新功能。**
+<img src="https://static.flyai.com/flyai_dir4.png" alt="FlyAI小助手微信二维码" style="zoom:50%;" />
 
 
-
-[![GPL LICENSE](https://www.flyai.com/images/coding.png)](https://flyai.com)
 

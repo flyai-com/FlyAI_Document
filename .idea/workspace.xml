@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="08097f44-fdbf-41ea-bf21-d38adf843f79" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FLYAI2.0框架项目文档.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/README_v2.0.md" beforeDir="false" afterPath="$PROJECT_DIR$/README_v2.0.md" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -14,19 +12,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/FlyAI项目规文档.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor>
-                <caret selection-end-line="1" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/README.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
@@ -38,17 +24,12 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/README_v2.0.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="15">
-                <caret line="5" selection-start-line="5" selection-end-line="5" />
-                <folding>
-                  <element signature="e#0#39#0" expanded="true" />
-                  <element signature="e#0#18#0" expanded="true" />
-                  <element signature="e#0#23#0" expanded="true" />
-                </folding>
+              <first_editor relative-caret-position="240">
+                <caret line="16" column="28" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="28" />
               </first_editor>
               <second_editor />
             </state>
@@ -124,16 +105,17 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds">
-    <option name="y" value="23" />
-    <option name="width" value="1440" />
-    <option name="height" value="877" />
+  <component name="ProjectFrameBounds" extendedState="6" fullScreen="true">
+    <option name="y" value="-1027" />
+    <option name="width" value="1680" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,7 +127,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -189,7 +170,9 @@
       <workItem from="1583589804041" duration="57000" />
       <workItem from="1584349378087" duration="260000" />
       <workItem from="1584693463349" duration="492000" />
-      <workItem from="1584694294210" duration="229000" />
+      <workItem from="1584694294210" duration="940000" />
+      <workItem from="1584704638824" duration="55000" />
+      <workItem from="1585288239657" duration="279000" />
     </task>
     <task id="LOCAL-00001" summary="添加模版，更新文档">
       <created>1582268864267</created>
@@ -212,17 +195,23 @@
       <option name="project" value="LOCAL" />
       <updated>1584693581946</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="添加模版，更新文档">
+      <created>1584694637514</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584694637514</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2229000" />
+    <option name="totallyTimeSpent" value="3274000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="877" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="-1027" width="1680" height="1027" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2732475" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.23931624" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -283,6 +272,8 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FLYAI2.0框架项目文档.md" />
+    <entry file="file://$PROJECT_DIR$/gpu训练文档.md" />
     <entry file="file://$PROJECT_DIR$/FlyAI项目规文档.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -293,19 +284,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/FLYAI2.0框架项目文档.md">
+    <entry file="file://$PROJECT_DIR$/README_v2.0.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="30">
-            <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="38" />
+          <first_editor relative-caret-position="240">
+            <caret line="16" column="28" selection-start-line="16" selection-start-column="4" selection-end-line="16" selection-end-column="28" />
           </first_editor>
           <second_editor />
         </state>
@@ -349,16 +332,11 @@
     <entry file="file://$PROJECT_DIR$/FLYAI项目详细文档.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/README_v2.0.md">
+    <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="15">
-            <caret line="5" selection-start-line="5" selection-end-line="5" />
-            <folding>
-              <element signature="e#0#39#0" expanded="true" />
-              <element signature="e#0#18#0" expanded="true" />
-              <element signature="e#0#23#0" expanded="true" />
-            </folding>
+          <first_editor relative-caret-position="30">
+            <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="38" />
           </first_editor>
           <second_editor />
         </state>

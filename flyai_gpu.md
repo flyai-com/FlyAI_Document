@@ -18,16 +18,16 @@ FlyAI会给每个用户分配免费的在线数据空间，用来保存你的数
 # overwrite:模型名称相同的时候再上传是否覆盖，True会覆盖，False系统会重新命名
 # 下载直接使用文件名称下载即可
 # dir_name:文件夹名称，可以创建目录，用做斜线划分，目录不要有中文和特殊字符
-# 例如:"/dataset" "/mydata/mnist"
+# 例如:"/data" "/mydata/mnist"
 upload_data("D:/data/MNIST.zip", overwrite=True)
 # 上传之后在服务器上使用文件名下载数据集
 # 服务器上数据下载地址为 ./MNIST.zip  decompression为True会自动解压
 download("MNIST.zip", decompression=True)
 
 # 或者设置路径上传数据，会自动在您的数据盘中创建路径
-upload_data("D:/data/MNIST.zip", overwrite=True, dir_name="/dataset")
-# 服务器上数据下载地址为 ./dataset/MNIST.zip  decompression为True会自动解压
-download("/dataset/MNIST.zip", decompression=True)
+upload_data("D:/data/MNIST.zip", overwrite=True, dir_name="/data")
+# 服务器上数据下载地址为 ./data/MNIST.zip  decompression为True会自动解压
+download("/data/MNIST.zip", decompression=True)
 ```
 
 #### 第三步:提交到GPU训练

@@ -6,6 +6,7 @@
 * [FlyAI本地调试代码指南](description/dev_1.md)
 * [样例项目代码详细说明](description/dev_2.md)
 * [预训练模型使用样例](description/dev_3.md)
+* [FlyAI GPU使用说明](flyai_gpu.md)
 ## FlyAI使用说明 <a id="description"></a>
 
 * [Jupyter本地调试和云端GPU运行](description/jupyter.md)

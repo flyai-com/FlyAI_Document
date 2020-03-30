@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="08097f44-fdbf-41ea-bf21-d38adf843f79" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-    </list>
+    <list default="true" id="08097f44-fdbf-41ea-bf21-d38adf843f79" name="Default Changelist" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,13 +19,8 @@
         <entry file="file://$PROJECT_DIR$/FLYAI2.0竞赛框架使用说明.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="359">
+              <first_editor relative-caret-position="705">
                 <caret line="47" selection-start-line="47" selection-end-line="49" selection-end-column="91" />
-                <folding>
-                  <element signature="e#0#39#0" expanded="true" />
-                  <element signature="e#0#18#0" expanded="true" />
-                  <element signature="e#0#23#0" expanded="true" />
-                </folding>
               </first_editor>
               <second_editor />
             </state>
@@ -39,7 +32,7 @@
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
               <first_editor relative-caret-position="225">
-                <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+                <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
               </first_editor>
               <second_editor />
             </state>
@@ -197,6 +190,7 @@
       <workItem from="1584704638824" duration="55000" />
       <workItem from="1585288239657" duration="279000" />
       <workItem from="1585308065555" duration="593000" />
+      <workItem from="1585381037539" duration="36000" />
     </task>
     <task id="LOCAL-00001" summary="添加模版，更新文档">
       <created>1582268864267</created>
@@ -254,17 +248,23 @@
       <option name="project" value="LOCAL" />
       <updated>1585308489227</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="添加模版，更新文档">
+      <created>1585381058610</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1585381058610</updated>
+    </task>
+    <option name="localTasksCounter" value="10" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="3867000" />
+    <option name="totallyTimeSpent" value="3903000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-47" y="-1050" width="1680" height="1050" extended-state="0" />
-    <editor active="true" />
+    <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24236874" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.2453505" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -347,6 +347,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/FLYAI2.0框架项目文档.html">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/FLYAI2.0竞赛框架使用说明.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="705">
+            <caret line="47" selection-start-line="47" selection-end-line="49" selection-end-column="91" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/README_v2.0.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
@@ -395,29 +408,11 @@
     <entry file="file://$PROJECT_DIR$/FLYAI项目详细文档.html">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/FLYAI2.0框架项目文档.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/FLYAI2.0竞赛框架使用说明.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="359">
-            <caret line="47" selection-start-line="47" selection-end-line="49" selection-end-column="91" />
-            <folding>
-              <element signature="e#0#39#0" expanded="true" />
-              <element signature="e#0#18#0" expanded="true" />
-              <element signature="e#0#23#0" expanded="true" />
-            </folding>
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/flyai_gpu.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="225">
-            <caret line="15" column="9" lean-forward="true" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
+            <caret line="15" column="9" selection-start-line="15" selection-start-column="9" selection-end-line="15" selection-end-column="9" />
           </first_editor>
           <second_editor />
         </state>

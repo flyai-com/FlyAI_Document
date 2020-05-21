@@ -13,6 +13,13 @@
 
 FlyAI会给每个用户分配免费的在线数据空间，用来保存你的数据集和模型。
 
+* 如图，显示为默认数据空间提供的MnistSimple所创建的文件夹，您也可以在本地自行创建并使用Upload_data方法上传到您的数据空间中。
+![默认数据空间文件展示](https://static.flyai.com/dataspace.png)
+* 选择【data】文件夹，可以看到官方已准备好的MNIST.zip 数据集文件；
+* 你可以点击`复制`将加载该数据集的方法代码块插入到工程文件中，方便实现；
+![复制数据集使用代码](https://static.flyai.com/dataspace2.png)
+
+以下是官方提供的完整实现代码，请作参考：
 ```python
 # data_file:数据集的路径
 # overwrite:模型名称相同的时候再上传是否覆盖，True会覆盖，False系统会重新命名

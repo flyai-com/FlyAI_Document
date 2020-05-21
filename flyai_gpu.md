@@ -4,7 +4,7 @@
 
 #### 第一步:安装FlyAI
 
-* 在自己的Python环境中安装flyai库，版本大于等于0.6.9。
+* 在自己的Python环境中安装flyai库，版本大于等于0.7.1。
 
 * FlyAI库的安装方法与PyTorch、Keras等其他Python库安装方式一样。
 * 注意：自己电脑上可能有多个Python和pip，安装目录不要弄错哦。
@@ -69,7 +69,7 @@ sava_train_model(model_file="./data/output/你的服务器上模型的名字", d
 
 > 网络不好的同学FlyAI还提供国内镜像源，使用方式如下：
 >
-> pip install -i https://pypi.flyai.com/simple flyai==0.6.9
+> pip install -i https://pypi.flyai.com/simple flyai==0.7.1
 
 3.使用自己的Python环境，遇到No module name "flyai"
 
@@ -77,9 +77,9 @@ sava_train_model(model_file="./data/output/你的服务器上模型的名字", d
 
 > 自己电脑上可能有多个Python和pip，安装目标不要弄错。
 >
-> windows用户在终端执行：pip所在路径pip.exe install -i https://pypi.flyai.com/simple flyai==0.6.9
+> windows用户在终端执行：pip所在路径pip.exe install -i https://pypi.flyai.com/simple flyai==0.7.1
 >
-> mac和linux用户在终端执行：pip所在路径/pip install -i https://pypi.flyai.com/simple flyai==0.6.9
+> mac和linux用户在终端执行：pip所在路径/pip install -i https://pypi.flyai.com/simple flyai==0.7.1
 >
 > 其他 No module name "xxxx"问题 也可以参考上面
 

@@ -5,7 +5,7 @@
 ```python
 from keras.applications import densenet
 from flyai.utils import remote_helper
-path=remote_helper.get_remote_date("https://www.flyai.com/m/v0.8|densenet169_weights_tf_dim_ordering_tf_kernels_notop.h5")
+path=remote_helper.get_remote_data("https://www.flyai.com/m/v0.8|densenet169_weights_tf_dim_ordering_tf_kernels_notop.h5")
 densenet_notop = densenet.DenseNet169(include_top=False, weights=None)
 densenet_notop.load_weights(path)
 # densenet_notop = densenet.DenseNet169(include_top=False， weights='imagenet')
@@ -24,7 +24,7 @@ model.fit_generator(...)
 ```python
 import torchvision
 from flyai.utils import remote_helper
-path=remote_helper.get_remote_date("https://www.flyai.com/m/resnet50-19c8e357.pth")
+path=remote_helper.get_remote_data("https://www.flyai.com/m/resnet50-19c8e357.pth")
 model = torchvision.models.resnet50(pretrained = False)
 # model = torchvision.models.resnet50(pretrained = True)
 # 这行代码与上面等同，只不过一个是调用FlyAI提供的预训练模型地址，一个是外网的地址
@@ -41,7 +41,7 @@ import bert.modeling as modeling
 # 必须使用该方法下载模型，然后加载
 from flyai.utils import remote_helper
 
-path = remote_helper.get_remote_date('https://www.flyai.com/m/uncased_L-12_H-768_A-12.zip')
+path = remote_helper.get_remote_data('https://www.flyai.com/m/uncased_L-12_H-768_A-12.zip')
 print('path:', path)
 data_root = os.path.splitext(path)[0]
 print('data_root:', data_root)

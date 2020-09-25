@@ -43,8 +43,6 @@
   >
   >高分的参赛选手，可实时获取奖金，通过微信提现
 
-参赛选手还可以查看[样例项目代码详细说明](#div3)
-
 比赛遇到问题不要着急可以添加FlyAI小助手微信，小姐姐在线解答您的问题。
 
 <img src="https://static.flyai.com/flyai_dir4.png" alt="FlyAI小助手微信二维码" style="zoom:50%;" />
@@ -61,7 +59,7 @@
   >
   >MAC和Linux用户在终端执行flyai脚本，本地调试项目
   >
-  >[点击查看使用详情](#div2)
+  >[点击查看使用详情](https://doc.flyai.com/description/dev_1.html)
 
   参赛选手还可以使用自己电脑上的Python环境，安装项目依赖，运行main.py来调试。
 
@@ -95,7 +93,7 @@
   >
   > 不填写版本号将默认安装最新版
 
-参赛选手还可以查看[样例项目代码详细说明](#div3)
+参赛选手还可以查看[样例项目代码详细说明](https://doc.flyai.com/description/dev_2.html)
 
 #### 3.FlyAI的Python库文档
 

@@ -1,29 +1,32 @@
 
 
-### [FlyAI竞赛平台](https://www.flyai.com)
+### [FlyAI2.0竞赛框架使用说明](https://www.flyai.com)
 
 ### [![GPL LICENSE](https://badgen.net/badge/License/GPL/green)](https://www.gnu.org/licenses/gpl-3.0.zh-cn.html) [![GPL LICENSE](https://badgen.net/badge/Supported/TensorFlow,Keras,PyTorch/green?list=1)](https://flyai.com) [![GPL LICENSE](https://badgen.net/badge/Python/3.+/green)](https://flyai.com) [![GPL LICENSE](https://badgen.net/badge/Platform/Windows,macOS,Linux/green?list=1)](https://flyai.com)
 
+***
+
 #### 1.参赛流程
+
+	> 本地使用的FlyAI Python库版本需要大于等于0.6.4
 
 * 第一步：参赛选手从[FlyAI官网](https://www.flyai.com)选择比赛报名，可在线查看代码并下载代码
 
   > 下载的项目中不包含数据集，运行main.py会自动下载调试数据集
   >
-  > 本地调试只有少量的数据，全量数据提交到GPU后会自动更新替换
+  > 本地调试根据不同数据集会提供60%～100%数据，全量数据提交到GPU后会自动更新替换
 
 * 第二步：本地代码调试
 
   > 本地配置Python3.5以上的运行环境，并安装项目运行所需的Python依赖包
-  >
-  > 在main.py中编写神经网络，在processor.py中处理数据
-  >
-  > 使用model.py测试模型是否保存成功
-  >
-  > 使用predict.py测试模型是否评估成功
-  >
-  > main.py中必须使用args.EPOCHS和args.BATCHl来读取数据
-
+  >app.json是项目的配置文件
+  > 
+  >在main.py中编写神经网络，没有框架限制
+  > 
+  >在prediction.py测试模型是否评估成功
+  > 
+  >main.py中需在class Main(FlyAI) 类中实现自己的的训练过程
+  
 * 第三步：提交到GPU训练，保存模型
 
   >本地调试完成之后，提交代码到GPU，在全量数据上训练模型，保存最优模型。
@@ -32,7 +35,7 @@
 
 * 第四步：评估模型，获取奖金，实时提现
 
-  >GPU训练完成后，会调用model.py中的predict_all方法评估，并给出最后得分
+  >GPU训练完成后，会调用prediction.py中的predict方法进行评估，并给出最后得分
   >
   >高分的参赛选手，可实时获取奖金，通过微信提现
 
@@ -44,7 +47,7 @@
 
 #### 2.样例项目结构说明
 
-<img src="https://static.flyai.com/flyai_dir_2.png" alt="FlyAI项目目录" style="zoom:50%;" />
+![项目目录](https://static.flyai.com/project2.png)
 
 
 
@@ -64,33 +67,15 @@
   >
   >flyai.exe支持一键配置并启动jupyter lab本地调试和提交
 
-* **`app.yaml`**
+* **`app.json`**
 
-  > 项目的配置文件，默认不需要修改
+  > 项目的说明描述文件，用来查看项目，不需要修改
 
 * **`main.py`**
 
   > 项目运行主文件，在该文件中编写神经网络代码
 
-* **`net.py`**
-
-  > 使用PyTorch的选手可以在该文件中编写神经网络，并main.py中使用。
-  >
-  > 使用其它框架的选手可以忽略该文件
-
-* **`processor.py`**
-
-  > 数据输入(input)、输出(output)统一处理文件
-  >
-  > FlyAI统一并简化了数据处理流程，参赛选手需要遵循统一的数据处理方式
-
-* **`model.py`**
-
-  >包含模型保存和评估方法
-  >
-  >排行榜分数调用该文件中predict_all方法获取，请参赛选手本地调试确保没问题
-
-* **`predict.py`**
+* **`prediction.py`**
 
   >模型本本评估调试文件
 
@@ -103,6 +88,8 @@
   > 项目中用到的Python依赖
   >
   > 引入新依赖时需要准确填写
+  >
+  > 不填写版本号将默认安装最新版
 
 参赛选手还可以查看[样例项目代码详细说明](#div3)
 
@@ -112,105 +99,151 @@
 
 FlyAI的库和其它Python库的安装方法一样，使用PIP工具安装
 
-> windows用户：pip所在路径pip.exe install -i https://pypi.flyai.com/simple flyai
+> windows用户：pip所在路径pip.exe install -i https://pypi.flyai.com/simple flyai==0.6.6
 >
-> mac和linux用户：pip所在路径/pip install -i https://pypi.flyai.com/simple flyai
+> mac和linux用户：pip所在路径/pip install -i https://pypi.flyai.com/simple flyai==0.6.4
 
-FlyAI库的主要用途是，处理并读取比赛数据，底层使用多线程实现，提高数据读取效率。
+FlyAI库的主要用途是，读取比赛数据。
 
 使用方式如下：
 
 ```python
-#引入flyai数据处理类Dataset
-from flyai.dataset import Dataset
-#初始化类对象，并设置整个数据集循环次数和批次大小
-dataset = Dataset(epochs=args.EPOCHS, batch=args.BATCH)
-#获取一批训练数据
-x_train, y_train = dataset.next_train_batch()
-#获取一批验证数据
-x_val, y_val = dataset.next_validation_batch()
+#引入flyai数据下载类，DataHelper
+from flyai.data_helper import DataHelper
+#初始化类对象
+data_helper = DataHelper()
+# 根据数据ID下载训练数据
+data_helper.download_from_ids("data_id xxxx")
+# 二选一或者根据app.json的配置下载文件
+data_helper.download_from_json()
 ```
+
+##### 新的数据集会下载到 `.data/input/data_id_xxx/ `目录下
 
 ***
 
-##### flyai.dataset文件详细文档
+#### <a name="div3">样例项目代码详细说明</a>
 
-```python
-class Dataset:
-    def __init__(self, epochs=5, batch=32, val_batch=32):
-        """
-        :param epochs: 训练的轮次，最大不超过100
-        :param batch: 训练的批次大小，太大会导致显存不足
-        :param val_batch: 验证的批次大小
-        """
-        self.lib = Lib(epochs, batch, val_batch)
+* `main.py`
 
-    def get_step(self):
-        """
-        根据dataset传入的epochs和batch，计算出来的训练总次数。
-        :return: 返回训练总次数
-        """
-        return self.lib.get_step()
+  > **每个项目的样例代码中已做简单实现，可供查考。**
+  >
+  > 程序入口，编写算法，训练模型的文件。在该文件中实现自己的算法。
+  >
+  > ```python
+  > # -*- coding: utf-8 -*-
+  > import argparse
+  > 
+  > from flyai.data_helper import DataHelper
+  > from flyai.framework import FlyAI
+  > 
+  > '''
+  > 样例代码仅供参考学习，可以自己修改实现逻辑。
+  > 模版项目下载支持（PyTorch、Tensorflow、Keras、MXNET等
+  > 第一次使用请看项目中的：FLYAI2.0框架项目详细文档.html
+  > 使用FlyAI提供的预训练模型可查看：https://www.flyai.com/models
+  > 学习资料可查看文档中心：https://doc.flyai.com/
+  > 常见问题：https://doc.flyai.com/question.html
+  > 遇到问题不要着急，添加小姐姐微信，扫描项目里面的：FlyAI小助手二维码-小姐姐在线解答您的问题.png
+  > '''
+  > 
+  > parser = argparse.ArgumentParser()
+  > parser.add_argument("-e", "--EPOCHS", default=10, type=int, help="train epochs")
+  > parser.add_argument("-b", "--BATCH", default=32, type=int, help="batch size")
+  > args = parser.parse_args()
+  > 
+  > 
+  > 
+  > 
+  > #继承 flyai.framework 中的 FlyAI模板类
+  > class Main(FlyAI):
+  >  '''
+  >  项目中必须继承FlyAI类，否则线上运行会报错。
+  >  '''
+  >  def download_data(self):
+  >      '''
+  >      下载数据
+  >      :return:
+  >      '''
+  >      data_helper = DataHelper()
+  > 		 # 根据数据ID下载训练数据
+  >      data_helper.download_from_ids("data_id xxxx")
+  >      # 二选一或者根据app.json的配置下载文件
+  >      data_helper.download_from_json()
+  >        
+  >  def deal_with_data(self):
+  >      '''
+  >      处理数据，如果没有可以不实现。
+  >      :return:
+  >      '''
+  >      pass
+  > 
+  >  def train(self):
+  >      '''
+  >      训练模型，必须实现此方法
+  >      :return:
+  >      '''
+  >      pass
+  > 
+  > 
+  > if __name__ == '__main__':
+  >  main = Main()
+  >  main.download_data()
+  >  main.deal_with_data()
+  >  main.train()
+  > 
+  > ```
+  >
+  > 
 
-    def get_train_length(self):
-        """
-        获取训练集总数量，本地调用返回的是100条，在GPU上调用返回全部数据集数量。
-        :return: 返回训练集总数量
-        """
-        return self.lib.get_train_length()
+* `prediction.py`
 
-    def get_validation_length(self):
-        """
-        获取验证集总数量，本地调用返回的是100条，在GPU上调用返回全部数据集数量。
-        :return: 返回验证集总数量
-        """
-        return self.lib.get_validation_length()
+  > **每个项目的样例代码中已做简单实现，可供查考。**
+  >
+  > 训练好模型之后可以继承`flyai.model.base`包中的`base`重写下面三个方法实现模型的保存、验证和使用。
+  >
+  > ```python
+  > # -*- coding: utf-8 -*
+  > #使用FlyAI提供的类
+  > from flyai.framework import FlyAI
+  > 
+  > #继承FlyAI实现加载模型和预测方法
+  > class Prediction(FlyAI):
+  >     def load_model(self):
+  >         '''
+  >         模型初始化，必须在此方法中加载模型
+  >         '''
+  >         pass
+  > 
+  >     def predict(self, **input_data):
+  >         '''
+  >         模型预测返回结果
+  >         :param input: 评估传入样例，是key-value字典类型 例如：{"user_id": 31031, "post_id": 3530, "create_post_user_id": 27617, "post_text": "心情棒棒哒"}
+  >         :return: 模型预测成功返回，也是字典类型 例如：{"label": 0}
+  >         '''
+  >         return 返回的例子 {"label": 0}
+  > ```
 
-    def next_train_batch(self):
-        """
-        获取一批训练数据，返回数据的数量是dataset中batch的大小。
-        :return: x_train,y_train
-        """
-        return self.lib.next_train_batch()
+* `path.py`
 
-    def next_validation_batch(self):
-        """
-        获取一批验证数据，返回数据的数量是dataset中val_batch的大小。
-        :return: x_val,y_val
-        """
-        return self.lib.next_validation_batch()
+  >数据、日志、模型的公共路径
+  >
+  >```python
+  ># -*- coding: utf-8 -*
+  >import sys
+  >
+  >import os
+  >
+  >#数据下载路径
+  >DATA_PATH = os.path.join(sys.path[0], 'data', 'input')
+  >#模型保存路径
+  >MODEL_PATH = os.path.join(sys.path[0], 'data', 'output', 'model')
+  >
+  >```
+  >
+  >
 
-    def next_batch(self, size=32, test_size=32, test_data=True):
-        """
-        获取一批训练和验证数据，可以自己设置返回的大小。
-        :return:x_train,y_train,x_val,y_val
-        """
-        return self.lib.next_batch(size, test_size, test_data)
-
-    def get_all_processor_data(self):
-        """
-        获取所有在processor.py中，通过input_x方法处理过的数据
-        :return:x_train,y_train,x_val,y_val
-        """
-        return self.lib.get_all_processor_data()
-
-    def get_all_data(self):
-        """
-        获取所有原始数据
-        :return:x_train,y_train,x_val,y_val
-        """
-        return self.lib.get_all_data()
-
-    def get_all_validation_data(self):
-        """
-        获取所有在processor.py中，通过input_x方法处理过的验证集数据
-        :return:x_val,y_val
-        """
-        return self.lib.get_all_validation_data()
-
-```
-
-
+***
 
 #### 4.预训练模型的使用
 
@@ -258,8 +291,8 @@ def get_remote_data(remote_name, unzip=True):
 >
 >（自己电脑上可能有多个Python和pip，安装目标不要弄错。）
 >
->- windows用户在终端执行：pip所在路径pip.exe install -i https://pypi.flyai.com/simple flyai
->- mac和linux用户在终端执行：pip所在路径/pip install -i https://pypi.flyai.com/simple flyai
+>- windows用户在终端执行：pip所在路径pip.exe install -i https://pypi.flyai.com/simple flyai==0.6.4
+>- mac和linux用户在终端执行：pip所在路径/pip install -i https://pypi.flyai.com/simple flyai==0.6.4
 >- 其他 No module name "xxxx"问题 也可以参考上面
 >
 >**Q：FlyAI自带的Python环境在哪,会不会覆盖本地环境？**
@@ -304,7 +337,7 @@ def get_remote_data(remote_name, unzip=True):
 
 ##### 4.下载本地测试数据
 
-> 运行flyai.exe程序，点击"下载数据"按钮，程序会下载100条调试数据
+> 运行flyai.exe程序，点击"下载数据"按钮，程序会下载60%～100%数据
 
 ##### 4.提交到GPU训练
 
@@ -394,7 +427,7 @@ def get_remote_data(remote_name, unzip=True):
 
 #### <a name="div_n">Mac和Linux调试</a>
 
-##### 方式一：命令行调试
+#####方式一：命令行调试
 
 ##### 1. 下载项目并解压
 
@@ -480,145 +513,6 @@ def get_remote_data(remote_name, unzip=True):
 
 ***
 
-#### <a name="div3">样例项目代码详细说明</a>
-
-* `main.py`
-
-  > **样例代码中已做简单实现，可供查考。**
-  >
-  > 程序入口，编写算法，训练模型的文件。在该文件中实现自己的算法。
-  >
-  > 通过`dataset.py`中的`next_batch`方法获取训练和测试数据。
-  >
-  > ```python
-  > '''
-  > Flyai库中的提供的数据处理方法
-  > 传入整个数据训练多少轮，每批次批大小
-  > '''
-  > dataset = Dataset(epochs=args.EPOCHS, batch=args.BATCH)
-  > #获取训练数据
-  > x_train, y_train = dataset.next_train_batch()
-  > #获取验证数据
-  > x_val, y_val = dataset.next_validation_batch()
-  > ```
-  >
-  > 通过`model.py`中的`save_model`方法保存模型
-  >
-  > ```python
-  > # 模型操作辅助类
-  > model = Model(dataset)
-  > model.save_model(YOU_NET)
-  > ```
-  >
-  > **如果使用`PyTorch`框架，需要在`net.py`文件中实现网络。其它用法同上。**
-
-* `processor.py`
-
-  > **样例代码中已做简单实现，可供查考。**
-  >
-  > 处理数据的输入输出文件，把通过csv文件返回的数据，处理成能让程序识别、训练的矩阵。
-  >
-  > 可以自己定义输入输出的方法名，在`app.yaml`中声明即可。
-  >
-  > ```python
-  >  def input_x(self, $INPUT_PARAMS):
-  >      '''
-  >  	参数为csv中作为输入x的一条数据，该方法会被dataset.next_train_batch()
-  >  	和dataset.next_validation_batch()多次调用。可在该方法中做数据增强
-  >  	该方法字段与app.yaml中的input:->columns:对应
-  >  	'''
-  >      pass
-  > 	
-  >  def output_x(self, $INPUT_PARAMS):
-  >       '''
-  >  	参数为csv中作为输入x的一条数据，该方法会被dataset.next_train_batch()
-  >  	和dataset.next_validation_batch()多次调用。
-  >  	该方法字段与app.yaml中的input:->columns:对应
-  >  	'''
-  >      pass
-  >  
-  >  def input_y(self, $OUTPUT_PARAMS):
-  >      '''
-  >      参数为csv中作为输入y的一条数据，该方法会被dataset.next_train_batch()
-  >  	和dataset.next_validation_batch()多次调用。
-  >  	该方法字段与app.yaml中的output:->columns:对应
-  >      '''
-  >      pass
-  >  
-  >  def output_y(self, data):
-  >      '''
-  >      输出的结果，会被dataset.to_categorys(data)调用
-  >      :param data: 预测返回的数据
-  >      :return: 返回预测的标签
-  >      '''
-  >      pass
-  > 
-  > ```
-
-  ##### 
-
-* `model.py`
-
-  > **样例代码中已做简单实现，可供查考。**
-  >
-  > 训练好模型之后可以继承`flyai.model.base`包中的`base`重写下面三个方法实现模型的保存、验证和使用。
-  >
-  > ```python
-  > def predict(self, **data):
-  >      '''
-  >      	使用模型
-  >    		:param data: 模型的输入的一个或多个参数
-  >      	:return:
-  >      '''
-  >      pass
-  > 
-  >  def predict_all(self, datas):
-  >      '''
-  >      （必须实现的方法）评估模型，对训练的好的模型进行打分
-  >    		:param datas: 验证集上的随机数据，类型为list
-  >      	:return outputs: 返回调用模型评估之后的list数据
-  >      '''
-  >      pass
-  > 
-  >  def save_model(self, network, path=MODEL_PATH, name=MODEL_NAME, overwrite=False):
-  >      '''
-  >      保存模型
-  >      :param network: 训练模型的网络
-  >      :param path: 要保存模型的路径
-  >      :param name: 要保存模型的名字
-  >      :param overwrite: 是否覆盖当前模型
-  >      :return:
-  >      '''
-  >      self.check(path, overwrite)
-  > 
-  > ```
-  
-  predict_all的参数格式
-  
-  ```python
-  from flyai.dataset import Dataset
-  from model import Model
-  import sys
-  
-  dataset = Dataset()
-  model = Model(dataset)
-  
-  # predict_all的参数是多个字典组成的列表类型的数据集结构
-  x_test = [{'image_path': 'img/10479.jpg'}, {'image_path': 'img/14607.jpg'}]
-  y_test = [{'label': 39}, {'label': 4}]
-  preds = model.predict_all(x_test)
-  labels = [i['label'] for i in y_test]
-  print(labels)
-  # predict是单个字典模式
-  img_path = 'img/851.jpg'
-  p = model.predict(image_path=img_path)
-  print(p)
-  ```
-  
-  
-
-***
-
 #### <a name="div4">预训练模型使用样例</a>
 
 ##### Keras预训练模型使用样例：
@@ -687,6 +581,5 @@ bert_vocab_file = os.path.join(data_root, 'vocab.txt')
 
 
 [![GPL LICENSE](https://www.flyai.com/images/coding.png)](https://flyai.com)
-
 
 

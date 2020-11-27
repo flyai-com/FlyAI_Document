@@ -1,6 +1,6 @@
 # Table of contents
 
-* [第一次使用必读](README_v2.0.md)
+* [第一次使用必读](README.md)
 * [常见问题](question.md)
 * [FlyAI本地调试代码指南](description/dev_1.md)
 * [预训练模型使用样例](description/dev_3.md)
